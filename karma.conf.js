@@ -13,15 +13,20 @@ module.exports = function(config) {
     files: [
       'app/bower_components/angular/angular.js',
       'app/bower_components/angular-mocks/angular-mocks.js',
+      'app/bower_components/jquery/jquery.js',
+      'app/bower_components/jasmine-jquery/lib/jasmine-jquery.js',
       'app/scripts/*.coffee',
       'app/scripts/**/*.coffee',
       'test/mock/**/*.coffee',
-      'test/spec/**/*.coffee'
+      'test/spec/**/*.coffee',
+      {pattern: 'test/spec/fixtures/**/*.html', watched: true, served: true, included: false},
+      {pattern: 'test/spec/fixtures/**/*.json', watched: true, served: true, included: false},
+      {pattern: 'test/spec/fixtures/**/*.xml', watched: true, served: true, included: false}
     ],
 
     // list of files / patterns to exclude
     exclude: [],
-
+//    preprocessors: {'*/.html': [] },
     // web server port
     port: 8080,
 
