@@ -15,7 +15,7 @@ If you want to test and use LiveReload enter the following in the terminal
 
 - grunt server && karma start
 
-# Troubleshooting
+### Troubleshooting
 
 If you see this in the terminal when you run npm install
 
@@ -23,7 +23,7 @@ If you see this in the terminal when you run npm install
 >
 > events.js:130
 >
-> throw TypeError('listener must be a function');'
+> throw TypeError('listener must be a function');
 
 then take a look at issue [#224](https://github.com/yeoman/generator-angular/issues/224)
 
