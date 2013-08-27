@@ -7,3 +7,4 @@ angular.module('AMCClientApp')
       'AngularJS'
       'Karma'
     ]
+
