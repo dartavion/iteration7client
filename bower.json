@@ -10,7 +10,9 @@
     "angular-cookies": "~1.0.7",
     "angular-sanitize": "~1.0.7",
     "jasmine-jquery": "~1.5.8",
-    "sass-bootstrap": "~3.0.0"
+    "sass-bootstrap": "~3.0.0",
+    "angularjs-swipe": "git@github.com:sayedabdelgleel/angularjs-swipe.git",
+    "holderjs": "git@github.com:imsky/holder.git#~1.9.0"
   },
   "devDependencies": {
     "angular-mocks": "~1.0.7",

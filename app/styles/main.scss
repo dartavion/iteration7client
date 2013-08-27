@@ -2,7 +2,7 @@ $iconSpritePath: "../images/glyphicons-halflings.png";
 $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 
 @import "sass-bootstrap/lib/bootstrap";
-
+@import "swiper";
 /* Put your CSS here */
 html, body {
   margin: 20px;
@@ -30,3 +30,4 @@ body {
     line-height: 1;
     letter-spacing: -1px;
 }
+

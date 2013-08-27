@@ -14,6 +14,7 @@ module.exports = function(config) {
       'app/bower_components/angular/angular.js',
       'app/bower_components/angular-mocks/angular-mocks.js',
       'app/bower_components/jquery/jquery.js',
+      'app/bower_components/angularjs-swipe/swiper.js',
       'app/bower_components/jasmine-jquery/lib/jasmine-jquery.js',
       'app/scripts/*.coffee',
       'app/scripts/**/*.coffee',
