@@ -17,6 +17,8 @@ Type these step by step
 4. bower install
 5. grunt
 
+* Visit http://192.168.33.30:9000 in a browser
+
 If you want to test and use LiveReload enter the following in the terminal
 
 - grunt server && karma start
