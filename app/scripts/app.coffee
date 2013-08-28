@@ -9,5 +9,8 @@ angular.module('AMCClientApp', ['swiper'])
       .when '/exhibitor',
         templateUrl: 'views/exhibitor.html',
         controller: 'ExhibitorCtrl'
+      .when '/home',
+        templateUrl: 'views/home.html',
+        controller: 'HomeCtrl'
       .otherwise
         redirectTo: '/'
