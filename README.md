@@ -8,8 +8,11 @@ Open a terminal and navigate to this project.
 
 Type these step by step
 
-1. npm install && bower install
-2. grunt
+1. vagrant up
+2. vagrant ssh
+3. cd /vagrant
+4. bower install
+5. grunt
 
 If you want to test and use LiveReload enter the following in the terminal
 
