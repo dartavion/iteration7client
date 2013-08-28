@@ -4,6 +4,9 @@ AMC-client - Exhibitor's and Events Search (Mobile First)
 UI Development
 ---
 
+* Download & Install VirtualBox https://www.virtualbox.org
+* Download & Install Vagrant http://www.vagrantup.com
+
 Open a terminal and navigate to this project.
 
 Type these step by step
