@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module('AMCClientApp', [])
+angular.module('AMCClientApp', ['swiper'])
   .config ($routeProvider) ->
     $routeProvider
       .when '/',
@@ -9,5 +9,8 @@ angular.module('AMCClientApp', [])
       .when '/exhibitor',
         templateUrl: 'views/exhibitor.html',
         controller: 'ExhibitorCtrl'
+      .when '/home',
+        templateUrl: 'views/home.html',
+        controller: 'HomeCtrl'
       .otherwise
         redirectTo: '/'
