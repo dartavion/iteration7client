@@ -4,6 +4,9 @@ AMC-client - Exhibitor's and Events Search (Mobile First)
 UI Development
 ---
 
+* Download & Install VirtualBox https://www.virtualbox.org
+* Download & Install Vagrant http://www.vagrantup.com
+
 Open a terminal and navigate to this project.
 
 Type these step by step
@@ -13,6 +16,8 @@ Type these step by step
 3. cd /vagrant
 4. bower install
 5. grunt
+
+* Visit http://192.168.33.30:9000 in a browser
 
 If you want to test and use LiveReload enter the following in the terminal
 
