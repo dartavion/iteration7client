@@ -5,7 +5,7 @@ angular.module('AMCClientApp')
     $scope.primaryNavigation = [
       {"href": "", "title": "Home"}
       {"href": "markets", "title": "Markets"}
-      {"href": "campus_map", "title": "Campus Map"}
+      {"href": "campusmap", "title": "Campus Map"}
       {"href": "exhibitor", "title": "All Exhibitors"}
       {"href": "login", "title": "Login/Logout"}
       {"href": "http://www.yahoo.com", "title": "Buyer Services"}
