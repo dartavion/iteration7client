@@ -20,35 +20,33 @@
 
 @import '../bower_components/sass-bootstrap/lib/variables';
 @import '../bower_components/sass-bootstrap/lib/mixins';
-.mobile-nav{display:none;}
+
 .navbar-toggle {float: none;}
 @media (max-width: $screen-tablet) {
   .body-content{
-    margin:0;
-    &.open{
+    -webkit-transition: all 0.1s ease-in-out;
+  }
+  .showing-menu{
+    overflow: hidden;
+    .body-content{
       margin-left:320px;
     }
+    .mobile-nav{
+      left: 0;
+    }
   }
-}
-
-@media (max-width: $screen-tablet) {
   .mobile-nav{
-    width:0;
     height: 100%;
     position: fixed;
-    left:0;
+    width: 320px;
+    left:-320px;
     top: 40px;
     bottom: 0;
     background-color: #222;
-    &.open{
-      display:block;
-      width: 300px;
-      -webkit-transition: width 1s ease-in-out, display 1s linear;
-      -moz-transition: width 1s ease-in-out, display 1s linear;
-      -o-transition: width 1s ease-in-out, display 1s linear;
-      transition: width 1s ease-in-out, display 1s linear;
-    }
+    -webkit-transition: all 0.1s ease-in-out;
   }
+
+
   .side-nav ul{
     padding: 20px 20px 10px 20px;
     list-style:none;

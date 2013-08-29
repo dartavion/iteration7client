@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
 </head>
-  <body ng-app="AMCClientApp">
+  <body ng-app="AMCClientApp" ng-class="body_class">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -26,10 +26,10 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="mobile-nav" ng-controller="MobilenavCtrl">
+    <div ng-class="container_class" class="mobile-nav" ng-controller="MobilenavCtrl">
       <div mobile-nav main-navigation="primaryNavigation"></div>
     </div>
-    <div class="container body-content" ng-view=""></div>
+    <div ng-class="container_class" class="container body-content" ng-view=""></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -80,6 +80,7 @@
         <script src="scripts/controllers/login.js"></script>
         <script src="scripts/directives/mobileNav.js"></script>
         <script src="scripts/controllers/mobileNav.js"></script>
+        <script src="scripts/controllers/mobileNavButton.js"></script>
         <!-- endbuild -->
 </body>
 </html>

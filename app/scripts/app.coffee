@@ -1,11 +1,11 @@
 'use strict'
 
 angular.module('AMCClientApp', ['swiper'])
-  .config ($routeProvider) ->
+  .config ($routeProvider, $locationProvider) ->
     $routeProvider
       .when '/',
-        templateUrl: 'views/main.html'
-        controller: 'MainCtrl'
+        templateUrl: 'views/home.html'
+        controller: 'HomeCtrl'
       .when '/exhibitor',
         templateUrl: 'views/exhibitor.html',
         controller: 'ExhibitorCtrl'
@@ -16,4 +16,5 @@ angular.module('AMCClientApp', ['swiper'])
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl'
       .otherwise
-        redirectTo: '/'
+        redirectTo: '/home'
+    $locationProvider.html5Mode(true)
