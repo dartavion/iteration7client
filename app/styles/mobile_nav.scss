@@ -6,6 +6,8 @@
 .mobile-nav{display:none;}
 @media (max-width: $screen-tablet) {
   .body-content{
+    position:relative;
+    left:0;
     -webkit-transition: all 0.1s ease-in-out;
   }
   .showing-menu{
@@ -13,12 +15,14 @@
     .body-content{
       position:absolute;
       left:320px;
+      -webkit-transition: all 0.1s ease-in-out;
     }
 
     .mobile-nav{
       left: 0;
       display:block;
       z-index:100;
+      -webkit-transition: all 0.1s ease-in-out;
     }
   }
   .mobile-nav{
@@ -28,6 +32,7 @@
     left:-320px;
     top: 40px;
     bottom: 0;
+    display:block;
     background-color: #222;
     -webkit-transition: all 0.1s ease-in-out;
   }
