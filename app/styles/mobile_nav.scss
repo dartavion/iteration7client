@@ -1,27 +1,9 @@
-//.sticky {
-//  position: sticky;
-//  top: 0;
-//  width: 100%;
-//  background-color:#fff;
-//  transition:box-shadow 2s;
-//  -moz-transition:box-shadow 2s;
-//  -webkit-transition:box-shadow 2s;
-//  -ms-transition:box-shadow 2s;
-//  -o-transition:box-shadow 2s;
-//  .navbar{
-//    background-color: #fff;
-//  }
-//}
-//.fixed {
-//  position: fixed;
-//  z-index: 1000;
-//  height: 50px;
-//}
-
 @import '../bower_components/sass-bootstrap/lib/variables';
 @import '../bower_components/sass-bootstrap/lib/mixins';
 
+// twitter override
 .navbar-toggle {float: none;}
+.mobile-nav{display:none;}
 @media (max-width: $screen-tablet) {
   .body-content{
     -webkit-transition: all 0.1s ease-in-out;
@@ -29,10 +11,14 @@
   .showing-menu{
     overflow: hidden;
     .body-content{
-      margin-left:320px;
+      position:absolute;
+      left:320px;
     }
+
     .mobile-nav{
       left: 0;
+      display:block;
+      z-index:100;
     }
   }
   .mobile-nav{
@@ -71,9 +57,11 @@
       }
     }
   }
+  // twitter override
   .navbar-brand {
     float:none;
   }
+  // twitter override
   .navbar-toggle {
     margin-left: 10px;
   }

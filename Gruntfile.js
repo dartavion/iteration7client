@@ -341,7 +341,14 @@ module.exports = function (grunt) {
           ]
         }
       }
+    },
+    'gh-pages': {
+      options: {
+        base: 'dist'
+      },
+      src: ['**']
     }
+
   });
 
   grunt.registerTask('server', function (target) {
@@ -387,4 +394,5 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+  grunt.loadNpmTasks('grunt-gh-pages');
 };
