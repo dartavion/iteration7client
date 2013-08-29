@@ -2,13 +2,14 @@
 
 
 <script>
-  Holder.run({images:".img", nocss:true})
+  Holder.run({images: ".img", nocss: true})
 </script>
 <section class="side-nav">
+  <ul>
     <li ng-repeat="link in mainNavigation">
       <a href="#/{{link.href}}">
         <span>
-          <img class="img" data-src="holder.js/24x24/social" />
+          <img class="img" data-src="holder.js/24x24/social"/>
         </span>
         <span>{{link.title}}</span>
         <i class="glyphicon glyphicon-chevron-down"></i>
