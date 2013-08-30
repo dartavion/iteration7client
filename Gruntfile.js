@@ -72,7 +72,7 @@ module.exports = function (grunt) {
       options: {
         port: 9000,
         // Change this to '0.0.0.0' to access the server from outside.
-        hostname: '0.0.0.0'
+        hostname: 'localhost'
       },
       livereload: {
         options: {
@@ -313,6 +313,10 @@ module.exports = function (grunt) {
       ]
     },
     karma: {
+      e2e: {
+        configFile: 'karma-e2e.conf.js',
+        singleRun: false
+      },
       unit: {
         configFile: 'karma.conf.js',
         singleRun: true
@@ -361,7 +365,7 @@ module.exports = function (grunt) {
       'concurrent:server',
       'autoprefixer',
       'connect:livereload',
-      // 'open',
+      'open',
       'watch'
     ]);
   });
@@ -372,6 +376,15 @@ module.exports = function (grunt) {
     'autoprefixer',
     'connect:test',
     'karma'
+  ]);
+
+  grunt.registerTask('test:e2e', [
+    'clean:server',
+    'coffee',
+    'compass',
+
+    'connect:livereload',
+    'karma:e2e'
   ]);
 
   grunt.registerTask('build', [

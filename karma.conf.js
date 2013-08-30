@@ -18,11 +18,11 @@ module.exports = function(config) {
       'app/bower_components/jasmine-jquery/lib/jasmine-jquery.js',
       'app/scripts/*.coffee',
       'app/scripts/**/*.coffee',
-      'test/mock/**/*.coffee',
-      'test/spec/**/*.coffee',
-      {pattern: 'test/spec/fixtures/**/*.html', watched: true, served: true, included: false},
-      {pattern: 'test/spec/fixtures/**/*.json', watched: true, served: true, included: false},
-      {pattern: 'test/spec/fixtures/**/*.xml', watched: true, served: true, included: false}
+//      'test/mock/**/*.coffee',
+      'test/spec/**/*.coffee'
+//      {pattern: 'test/spec/fixtures/**/*.html', watched: true, served: true, included: false},
+//      {pattern: 'test/spec/fixtures/**/*.json', watched: true, served: true, included: false},
+//      {pattern: 'test/spec/fixtures/**/*.xml', watched: true, served: true, included: false}
     ],
 
     // list of files / patterns to exclude
@@ -48,7 +48,7 @@ module.exports = function(config) {
     // - Safari (only Mac)
     // - PhantomJS
     // - IE (only Windows)
-    // browsers: ['Chrome'],
+    browsers: ['Chrome'],
 
 
     // Continuous Integration mode
