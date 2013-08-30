@@ -1,7 +1,7 @@
 'use strict'
 
 angular.module('AMCClientApp')
-.controller 'MobilenavCtrl', ($scope) ->
+.controller 'MobilenavCtrl', ($scope, $rootScope) ->
     $scope.primaryNavigation = [
       {"href": "", "title": 'Home'}
       {"href": "markets", "title": "Markets"}
@@ -34,3 +34,6 @@ angular.module('AMCClientApp')
         {"href": "contact", title: "Education Center"}
       ]}
     ]
+
+    $rootScope.closeMe = () ->
+      console.log 'ha'

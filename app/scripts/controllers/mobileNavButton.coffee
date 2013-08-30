@@ -11,3 +11,5 @@ angular.module('AMCClientApp')
         $rootScope.$broadcast('navIsOpen')
 
 
+    $scope.closeMe = () ->
+      console.log 'ha'
