@@ -1,7 +1,7 @@
 'use strict'
 
 angular.module('AMCClientApp')
-  .controller 'MainCtrl', ($scope) ->
+  .controller 'TravelCtrl', ($scope) ->
     $scope.awesomeThings = [
       'HTML5 Boilerplate'
       'AngularJS'

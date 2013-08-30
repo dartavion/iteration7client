@@ -21,6 +21,18 @@ angular.module('AMCClientApp', ['swiper'])
       .when '/campusmap',
         templateUrl: 'views/campusmap.html',
         controller: 'CampusmapCtrl'
+      .when '/services',
+        templateUrl: 'views/services.html',
+        controller: 'ServicesCtrl'
+      .when '/collections',
+        templateUrl: 'views/collections.html',
+        controller: 'CollectionsCtrl'
+      .when '/travel',
+        templateUrl: 'views/travel.html',
+        controller: 'TravelCtrl'
+      .when '/contact',
+        templateUrl: 'views/contact.html',
+        controller: 'ContactCtrl'
       .otherwise
         redirectTo: '/home'
 #    $locationProvider.html5Mode(true)

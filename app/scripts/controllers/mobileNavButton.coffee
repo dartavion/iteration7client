@@ -8,6 +8,6 @@ angular.module('AMCClientApp')
         $rootScope.body_class = ''
       else
         $rootScope.body_class = 'showing-menu'
-
+        $rootScope.$broadcast('navIsOpen')
 
 

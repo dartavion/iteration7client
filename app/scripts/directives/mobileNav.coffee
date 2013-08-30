@@ -10,6 +10,6 @@ angular.module('AMCClientApp')
       mainNavigation: "="
     }
     link: (scope, element, attrs) ->
-
-
+      element.bind 'navIsOpen', () ->
+        console.log 'nice'
   )
