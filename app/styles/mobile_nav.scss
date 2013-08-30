@@ -3,7 +3,7 @@
 
 // twitter override
 .navbar-toggle {float: left;}
-.mobile-nav{display:none;}
+.mobile-nav{display:none;height:100%;}
 @media (max-width: $screen-tablet) {
   .body-content{
     position:relative;
@@ -26,6 +26,7 @@
     }
   }
   .mobile-nav{
+    overflow-y:scroll;
     height: 100%;
     position: fixed;
     width: 320px;
@@ -36,9 +37,7 @@
     background-color: #222;
     -webkit-transition: all 0.1s ease-in-out;
   }
-  section.side-nav{
-    overflow:scroll !important;
-  }
+
   .side-nav ul{
     padding: 20px 20px 10px 20px;
     list-style:none;
