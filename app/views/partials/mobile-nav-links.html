@@ -4,23 +4,22 @@
 <script>
   Holder.run({images: ".img", nocss: true})
 </script>
-<section id="side-nav" class="side-nav">
-  <ul id="super-duper-nav">
+<section class="side-nav">
+  <ul>
     <li ng-repeat="link in mainNavigation" style="padding:10px 0 10px 0">
 
-      <a data-toggle="collapse" data-parent="#side-nav" data-target="#c{{$index}}" href="#/{{link.href}}">
+      <a class="nav-title" data-toggle="collapse" data-parent="#side-nav" data-target="#c{{$index}}" href="#/{{link.href}}">
         <img class="img" data-src="holder.js/24x24/social"/>
         <span>{{link.title}}</span>
         <i ng-show="link.subNav" class="glyphicon glyphicon-chevron-down"></i>
       </a>
 
-      <ul id="c{{$index}}" ng-show="link.subNav" ng-class="sub_nav_class" class="collapse" style="padding:0;margin:0;">
-        <li ng-repeat="subNavItem in link.subNav" style="padding:0;margin:0;">
-          <a href="#/{{subNavItem.href}}">
-            <span>{{subNavItem.title}}</span>
-          </a>
-        </li>
-      </ul>
+
+      <div id="c{{$index}}" ng-show="link.subNav" ng-class="sub_nav_class" class="collapse" style="padding:0;margin:0;">
+        <a ng-repeat="subNavItem in link.subNav" style="padding:0;margin:0;display:block;" href="#/{{subNavItem.href}}">
+          <span>{{subNavItem.title}}</span>
+        </a>
+      </div>
 
     </li>
   </ul>
