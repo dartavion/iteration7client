@@ -35,3 +35,7 @@ angular.module('AMCClientApp')
       ]}
     ]
 
+    $scope.toggleSubNav = () ->
+      console.log 'got click'
+      if $scope.sub_nav_class isnt 'open'
+      then console.log 'ha'

@@ -6,21 +6,21 @@
 </script>
 <section class="side-nav">
   <ul style="overflow-y:scroll !important">
-    <li ng-repeat="link in mainNavigation">
+    <li ng-click="toggleSubNav()" ng-repeat="link in mainNavigation">
       <a href="#/{{link.href}}">
         <img class="img" data-src="holder.js/24x24/social"/>
         <span>{{link.title}}</span>
-        <i class="glyphicon glyphicon-chevron-down"></i>
+        <i ng-show="link.subNav" class="glyphicon glyphicon-chevron-down"></i>
       </a>
-      <div ng-if="link.subNav">
-        <ul>
-          <li ng-repeat="subNavItem in link.subNav">
-            <a href="#/{{subNavItem.href}}">
-              <span>{{subNavItem.title}}</span>
-            </a>
-          </li>
-        </ul>
-      </div>
+
+      <ul ng-show="link.subNav" ng-class="sub_nav_class">
+        <li ng-repeat="subNavItem in link.subNav">
+          <a href="#/{{subNavItem.href}}">
+            <span>{{subNavItem.title}}</span>
+          </a>
+        </li>
+      </ul>
+
     </li>
   </ul>
 </section>
