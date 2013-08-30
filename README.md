@@ -41,4 +41,19 @@ Two things to try
 - npm uninstall -g generator-karma && npm install -g generator-angular
 
 
+### Testing
+[Unit, Midway and E2E Examples](http://www.yearofmoo.com/2013/01/full-spectrum-testing-with-angularjs-and-karma.html)
+
+- Run application - grunt server
+- Run End to End tests - grunt test:e2e
+- Run Unit tests grunt test:unit
+
+### Pushing to github.io
+
+- run tests first
+- Build application - grunt build
+- Commit and push to github if tests are passing
+- Push to github.io - grunt gh-pages
+
+- To see changes visit - http://digitalscientists.github.io/AMC-client/
 
