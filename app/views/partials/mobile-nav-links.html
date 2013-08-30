@@ -5,13 +5,22 @@
   Holder.run({images: ".img", nocss: true})
 </script>
 <section class="side-nav">
-  <ul>
+  <ul style="overflow-y:scroll !important">
     <li ng-repeat="link in mainNavigation">
       <a href="#/{{link.href}}">
         <img class="img" data-src="holder.js/24x24/social"/>
         <span>{{link.title}}</span>
         <i class="glyphicon glyphicon-chevron-down"></i>
       </a>
+      <div ng-if="link.subNav">
+        <ul>
+          <li ng-repeat="subNavItem in link.subNav">
+            <a href="#/{{subNavItem.href}}">
+              <span>{{subNavItem.title}}</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </li>
   </ul>
 </section>
