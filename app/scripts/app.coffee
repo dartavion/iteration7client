@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module('AMCClientApp', ['swiper'])
+angular.module('AMCClientApp', ['swiper', 'ngRoute', 'ngAnimate'])
   .config ($routeProvider, $locationProvider) ->
     $routeProvider
       .when '/',

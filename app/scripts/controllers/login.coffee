@@ -1,9 +1,7 @@
 'use strict'
 
 angular.module('AMCClientApp')
-  .controller 'LoginCtrl', ($scope) ->
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate'
-      'AngularJS'
-      'Karma'
-    ]
+  .controller 'LoginCtrl', ($scope, $rootScope) ->
+    $rootScope.isHidden = false
+    $rootScope.fadeIt = () ->
+      $rootScope.isHidden = not $rootScope.isHidden

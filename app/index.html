@@ -41,7 +41,10 @@
        ga('create', 'UA-XXXXX-X');
        ga('send', 'pageview');
     </script>
-
+    <script src="bower_components/gsap/src/uncompressed/plugins/CSSPlugin.js"></script>
+    <script src="bower_components/gsap/src/uncompressed/plugins/ScrollToPlugin.js"></script>
+    <script src="bower_components/gsap/src/uncompressed/TweenMax.js"></script>
+    <script src="bower_components/gsap/src/uncompressed/TimelineMax.js"></script>
     <script src="bower_components/jquery/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
 
@@ -64,9 +67,12 @@
         <!-- endbuild -->
 
         <!-- build:js scripts/modules.js -->
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
         <script src="bower_components/angular-resource/angular-resource.js"></script>
         <script src="bower_components/angular-cookies/angular-cookies.js"></script>
         <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+
         <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
@@ -74,10 +80,10 @@
         <script src="bower_components/angularjs-swipe/swiper.js"></script>
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/exhibitor.js"></script>
-        <script src="scripts/directives/accordion.js"></script>
+
         <script src="scripts/controllers/home.js"></script>
         <script src="scripts/controllers/login.js"></script>
-        <script src="scripts/directives/mobileNav.js"></script>
+
         <script src="scripts/controllers/mobileNav.js"></script>
         <script src="scripts/controllers/mobileNavButton.js"></script>
         <script src="scripts/controllers/markets.js"></script>
@@ -86,6 +92,12 @@
         <script src="scripts/controllers/collections.js"></script>
         <script src="scripts/controllers/travel.js"></script>
         <script src="scripts/controllers/contact.js"></script>
+        <!-- Directives -->
+        <script src="scripts/directives/accordion.js"></script>
+        <script src="scripts/directives/marketPlan.js"></script>
+        <script src="scripts/directives/mobileNav.js"></script>
+        <!-- Animations -->
+        <script src="scripts/animations/marketPlan.js"></script>
         <!-- endbuild -->
 </body>
 </html>
