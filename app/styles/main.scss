@@ -1,19 +1,19 @@
 //$iconSpritePath: "../images/glyphicons-halflings.png";
 //$iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 
-@font-face {
-  font-family: 'Glyphicons Halflings';
-  src: url('../styles/fonts/glyphicons-halflings-regular.eot');
-  src: url('../styles/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
-  url('../styles/fonts/glyphicons-halflings-regular.woff') format('woff'),
-  url('../styles/fonts/glyphicons-halflings-regular.ttf') format('truetype'),
-  url('../styles/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
-}
-
+// TWITTER
 @import "../bower_components/sass-bootstrap/lib/bootstrap";
-@import "swiper";
-@import "mobile_nav";
-/* Put your CSS here */
+
+// BASE
+@import "base/fonts";
+
+// COMPONENTS
+@import "components/swiper";
+@import "components/mobile_nav";
+
+// LAYOUT
+
+// VIEWS
 
 
 
