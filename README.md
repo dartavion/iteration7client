@@ -19,6 +19,21 @@ Type these step by step
 
 * Visit http://192.168.33.30:9000 in a browser
 
+### UI Architecture
+
+We are using
+
+- [Twitter's Bootstrap 3](http://getbootstrap.com/)
+- [AngulaJS v1.2.0-rc1](http://angularjs.org/)
+- [Yeoman](http://yeoman.io/)
+- [Bower Package Manager](http://bower.io/)
+- [Grunt JS Task Runner](http://gruntjs.com/)
+
+#### Angular Help
+
+-[Learning](https://github.com/jmcunningham/AngularJS-Learning)
+-[Learning Videos from Egghead.io](http://egghead.io/lessons)
+
 If you want to test and use LiveReload enter the following in the terminal
 
 - grunt server && karma start
