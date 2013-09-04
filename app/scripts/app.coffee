@@ -6,6 +6,11 @@ angular.module('AMCClientApp', ['swiper', 'ngRoute', 'ngAnimate'])
       .when '/',
         templateUrl: 'views/home.html'
         controller: 'HomeCtrl'
+        templateUrl: 'views/main.html'
+        controller: 'MainCtrl'
+      .when '/exhibitors-list',
+        templateUrl: 'views/exhibitors-list.html',
+        controller: 'ExhibitorslistCtrl'
       .when '/exhibitor',
         templateUrl: 'views/exhibitor.html',
         controller: 'ExhibitorCtrl'
