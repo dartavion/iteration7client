@@ -1,0 +1,29 @@
+.exh-accordion {
+	list-style: none;
+}
+
+li.exh-accordion-body {
+	margin-bottom: -1px;
+	border: 1px solid #dddddd;
+	span {
+		padding: 10px 15px;
+		display: inline-block;
+		line-height: 14px;
+		vertical-align: middle;
+	}
+}
+
+.exh-heading {
+	width: 100%;
+	text-align: left;
+}
+
+.exh-pages-wrapper {
+	overflow-x: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.exh-pages {
+	width: 960px;
+}
