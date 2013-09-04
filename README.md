@@ -60,8 +60,9 @@ We are using
 - [Learning Videos from Egghead.io](http://egghead.io/lessons)
 
 If you want to test and use LiveReload enter the following in the terminal
-
-- grunt server && karma start
+````
+grunt server && karma start
+````
 
 ### Troubleshooting
 
@@ -76,21 +77,27 @@ If you see this in the terminal when you run npm install
 then take a look at issue [#224](https://github.com/yeoman/generator-angular/issues/224)
 
 Two things to try
-
-- npm cache clean
-- npm uninstall -g generator-karma && npm install -g generator-angular
-
+````
+npm cache clean
+npm uninstall -g generator-karma && npm install -g generator-angular
+````
 
 ### Testing
 [Unit, Midway and E2E Examples](http://www.yearofmoo.com/2013/01/full-spectrum-testing-with-angularjs-and-karma.html)
 
+Run application
 ````
-Run application - grunt server
-
-Run End to End tests - grunt test:e2e
-
-Run Unit tests grunt test:unit
+grunt server
 ````
+Run End to End tests Though this is going to change from Karma to - [Protractor](https://github.com/angular/protractor/blob/master/docs/control-flow.md)
+````
+grunt test:e2e
+````
+Run Unit tests
+````
+ grunt test:unit
+````
+
 ### Pushing to github.io
 
 - run tests first
