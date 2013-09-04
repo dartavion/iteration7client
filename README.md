@@ -56,8 +56,8 @@ We are using
 
 #### Angular Help
 
--[Learning](https://github.com/jmcunningham/AngularJS-Learning)
--[Learning Videos from Egghead.io](http://egghead.io/lessons)
+- [Learning](https://github.com/jmcunningham/AngularJS-Learning)
+- [Learning Videos from Egghead.io](http://egghead.io/lessons)
 
 If you want to test and use LiveReload enter the following in the terminal
 
@@ -84,10 +84,13 @@ Two things to try
 ### Testing
 [Unit, Midway and E2E Examples](http://www.yearofmoo.com/2013/01/full-spectrum-testing-with-angularjs-and-karma.html)
 
-- Run application - grunt server
-- Run End to End tests - grunt test:e2e
-- Run Unit tests grunt test:unit
+''''
+Run application - grunt server
 
+Run End to End tests - grunt test:e2e
+
+Run Unit tests grunt test:unit
+''''
 ### Pushing to github.io
 
 - run tests first
