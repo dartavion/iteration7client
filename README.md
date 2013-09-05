@@ -7,41 +7,40 @@ UI Development
 * Download & Install VirtualBox https://www.virtualbox.org
 * Download & Install Vagrant http://www.vagrantup.com
 
-Step 1. INSTALL VIRTUAL BOX 4.2.12
-https://www.virtualbox.org/wiki/Download_Old_Builds_4_2
-Click the link OS X hosts -> Intel Macs to download the .dmg installation file for Virtual Box 4.2.12 **
-** Last time checked the latest release (4.2.14) of Virtual Box had issues.
 
-Step 2. RUN VIRTUAL BOX
-When the installation is complete, go to the Applications folder on your Mac and run Virtual Box.
+1. Download AMC-Client source in to your source folder:
+git clone https://github.com/digitalscientists/AMC-client.git
 
-STEP 3. INSTALL VAGRANT
-http://downloads.vagrantup.com/tags/v1.2.7
-Click the link Vagrant-1.2.7.dmg to download and install Vagrant.
+2. CD to your AMC-client source
+cd AMC-client
 
-STEP 4. SETUP VAGRANT BOX
-http://www.vagrantbox.es/
-Run the command lines below to setup Vagrant:
-Fadi already configured and boxed Virtual Machine so you can skip adding box and initialization of it.
-Just cd to AMC-client directory and evaluate in terminal:
+3. Run vagrant
 vagrant up
-It will take ~15-20 minutes to download a remote VM and and configure it on your environment.
 
-STEP 5. SSH INTO THE VIRTUAL BOX VIA VAGRANT
-vagrant ssh
+That's it. Check your code in and read the "Pushing to github.io" section you are ready to publish to test.
 
-STEP 6. NOW YOU CAN TRY STEPS FROM README
-Open a terminal and navigate to this project.
-Type these step by step
-	1.	vagrant up (done)
-	2.	vagrant ssh (done)
-	3.	cd /vagrant
-	4.	bower install
-	5.	grunt server
+### Pushing to github.io
 
-	•	Visit http://192.168.33.30:9000 in a browser
+- run tests first
+- Build application - grunt build
+- Commit and push to github if tests are passing
+- Push to github.io - grunt gh-pages
+
+- To see changes visit - http://digitalscientists.github.io/AMC-client/
+
+
+
+Additional Info: 
+
+ - Visit http://192.168.33.30:9000 in a browser
 If you want to test and use LiveReload enter the following in the terminal
-	•	grunt server && karma start
+ - grunt server && karma start
+ - Learn Yeoman to automate scaffolding to testing
+	- Yo scaffolds out a new application, writing your Grunt configuration and pulling in relevant Grunt tasks that you might need for your build.
+	- Grunt is used to build, preview and test your project, thanks to help from tasks curated by the Yeoman team and grunt-contrib.
+	- Bower is used for dependency management, so that you no longer have to manually download and manage your scripts.
+
+	
 
 
 ### UI Architecture
@@ -98,12 +97,5 @@ Run Unit tests
  grunt test:unit
 ````
 
-### Pushing to github.io
 
-- run tests first
-- Build application - grunt build
-- Commit and push to github if tests are passing
-- Push to github.io - grunt gh-pages
-
-- To see changes visit - http://digitalscientists.github.io/AMC-client/
 
