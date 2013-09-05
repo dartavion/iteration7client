@@ -20,9 +20,12 @@ vagrant up
 4. Enter vagrant <br>
 vagrant ssh
 
+5. cd /vagrant
+6. sudo npm install
+7. bower install
+8. grunt server
+
 That's it. Check your code in and read the "Pushing to github.io" section you are ready to publish to test.
-
-
 
 Additional Info: 
 
