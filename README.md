@@ -8,17 +8,17 @@ UI Development
 * Download & Install Vagrant http://www.vagrantup.com
 
 
-1. Download AMC-Client source in to your source folder:
--- git clone https://github.com/digitalscientists/AMC-client.git
+1. Download AMC-Client source in to your source folder: <br>
+git clone https://github.com/digitalscientists/AMC-client.git
 
-2. CD to your AMC-client source
--- cd AMC-client
+2. CD to your AMC-client source <br>
+cd AMC-client
 
-3. Run vagrant
--- vagrant up
+3. Run vagrant<br>
+vagrant up
 
-4. Enter vagrant
--- vagrant ssh
+4. Enter vagrant <br>
+vagrant ssh
 
 That's it. Check your code in and read the "Pushing to github.io" section you are ready to publish to test.
 
