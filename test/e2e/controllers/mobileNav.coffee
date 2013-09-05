@@ -1,4 +1,11 @@
-'use strict'
+# when protractor becomes a bit more mature
+
+#protractor = require 'protractor'
+#webdriver = require 'selenium-webdriver'
+#util = require "util"
+#assert = require 'assert'
+#path = require 'path'
+
 
 describe 'Mobile Navigation', () ->
   beforeEach ->
