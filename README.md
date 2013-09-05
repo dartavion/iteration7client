@@ -19,15 +19,6 @@ vagrant up
 
 That's it. Check your code in and read the "Pushing to github.io" section you are ready to publish to test.
 
-### Pushing to github.io
-
-- run tests first
-- Build application - grunt build
-- Commit and push to github if tests are passing
-- Push to github.io - grunt gh-pages
-
-- To see changes visit - http://digitalscientists.github.io/AMC-client/
-
 
 
 Additional Info: 
@@ -41,6 +32,18 @@ If you want to test and use LiveReload enter the following in the terminal
 	- Bower is used for dependency management, so that you no longer have to manually download and manage your scripts.
 
 	
+	
+	
+### Pushing to github.io
+
+- run tests first
+- Build application - grunt build
+- Commit and push to github if tests are passing
+- Push to github.io - grunt gh-pages
+
+- To see changes visit - http://digitalscientists.github.io/AMC-client/
+
+
 
 
 ### UI Architecture
