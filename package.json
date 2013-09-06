@@ -2,7 +2,14 @@
   "name": "amc-client",
   "version": "0.0.0",
   "dependencies": {
-    "karma-safari-launcher": "~0.1.1"
+    "karma-safari-launcher": "~0.1.1",
+    "karma-browserstack-launcher": "0.0.4",
+    "protractor": "~0.8.0",
+    "protractor-coffee-preprocessor": "0.0.1",
+    "grunt-env": "~0.4.0",
+    "grunt-shell": "~0.3.1",
+    "cucumber": "~0.3.1",
+    "grunt-cucumber": "~0.2.1"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
@@ -47,6 +54,7 @@
     "node": ">=0.8.0"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "postinstall": "./node_modules/protractor/bin/install_selenium_standalone"
   }
 }
