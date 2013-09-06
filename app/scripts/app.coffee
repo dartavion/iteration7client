@@ -9,6 +9,9 @@ angular.module('AMCClientApp', ['swiper', 'ngRoute', 'ngAnimate'])
       .when '/exhibitors-list',
         templateUrl: 'views/exhibitors-list.html',
         controller: 'ExhibitorslistCtrl'
+      .when '/exhibitor-detail',
+        templateUrl: 'views/exhibitor-detail.html',
+        controller: 'ExhibitorDetail'
       .when '/exhibitor',
         templateUrl: 'views/exhibitor.html',
         controller: 'ExhibitorCtrl'
