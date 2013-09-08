@@ -7,5 +7,5 @@ angular.module('AMCClientApp')
       return
 
     removeClass: (element, className) ->
-      TweenMax.to(element, .5, {left: 320, ease:Power2.easeInOut})
+      TweenMax.to(element, .2, {left: 260, ease:Power2.easeInOut})
       return

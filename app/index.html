@@ -22,15 +22,15 @@
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script><![endif]-->
 
-    <header class="navbar navbar-inverse navbar-fixed-top"
-            role="banner"
-            ng-controller="HeaderCtrl"
-            ng-include="'views/partials/header.html'"></header>
-
     <div ng-controller="MainCtrl">
 
       <div class="main-view"
            toggle-drawer="isClosed">
+
+        <header class="navbar navbar-inverse"
+                role="banner"
+                ng-controller="HeaderCtrl"
+                ng-include="'views/partials/header.html'"></header>
 
         <div class="drawer">
           <div ng-include="'views/partials/mobile-nav-links.html'"></div>
@@ -92,6 +92,7 @@
         <script src="bower_components/angular-resource/angular-resource.js"></script>
         <script src="bower_components/angular-cookies/angular-cookies.js"></script>
         <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+        <script src="bower_components/angular-touch/angular-touch.js"></script>
 
         <!-- endbuild -->
 

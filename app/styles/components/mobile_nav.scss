@@ -22,15 +22,18 @@
     position: fixed;
     width:100%;
   }
+
   .drawer{
     position:absolute;
-    width: 320px;
-    left:-320px;
-    top: 40px;
+    overflow-y:auto;
+    width: 260px;
+    left:-260px;
+    top: 0;
     bottom: 0;
     display:block;
     background-color: #222;
   }
+
   .side-nav ul{
     padding: 20px 20px 10px 20px;
     list-style:none;
