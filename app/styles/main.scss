@@ -23,3 +23,31 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
   height: auto;
 }
 
+.my-special-animation.ng-enter {
+  -webkit-animation:0.5s red-to-blue;
+  -moz-animation:0.5s red-to-blue;
+  -o-animation:0.5s red-to-blue;
+  animation:0.5s red-to-blue;
+}
+
+@keyframes red-to-blue {
+  from { background:red; }
+  to { background:blue; }
+}
+
+@-webkit-keyframes red-to-blue {
+  from { background:red; }
+  to { background:blue; }
+}
+
+@-moz-keyframes red-to-blue {
+  from { background:red; }
+  to { background:blue; }
+}
+
+@-o-keyframes red-to-blue {
+  from { background:red; }
+  to { background:blue; }
+}
+
+

@@ -2,14 +2,13 @@
 
 angular.module('AMCClientApp')
 
-  .directive('mobileNav', () ->
+  .directive('drawer', () ->
     transclude: false
     templateUrl: 'views/partials/mobile-nav-links.html'
     restrict: 'EA'
     scope: {
-      mainNavigation: "="
+      navItems: "="
     }
     link: (scope, element, attrs) ->
-
-      console.log 'nice'
+      console.log(scope.navItems)
   )

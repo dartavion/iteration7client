@@ -411,7 +411,6 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('ptor', [
-//        'coffee',
         'shell:ptor'
     ]);
 

@@ -4,12 +4,12 @@
 <script>
   Holder.run({images: ".img", nocss: true})
 </script>
-<div class="brand">brand</div>
+
 <section class="side-nav">
   <ul>
-    <li ng-repeat="link in mainNavigation" style="padding:10px 0 10px 0">
+    <li ng-repeat="link in navModel.list" style="padding:10px 0 10px 0">
 
-      <a ng-click="closeMe()" class="nav-title" data-toggle="collapse" data-parent="#side-nav" data-target="#c{{$index}}" href="#/{{link.href}}">
+      <a ng-click="!link.subNav ? toggleNav() : ''" class="nav-title" data-toggle="collapse" data-parent="#side-nav" data-target="#c{{$index}}" ng-href="{{link.href ? '/#/' + link.href : ''}}">
         <img class="img" data-src="holder.js/24x24/social"/>
         <span>{{link.title}}</span>
         <i ng-show="link.subNav" class="glyphicon glyphicon-chevron-down"></i>
@@ -17,7 +17,7 @@
 
 
       <div id="c{{$index}}" ng-show="link.subNav" ng-class="sub_nav_class" class="collapse" style="padding:0;margin:0;">
-        <a ng-repeat="subNavItem in link.subNav" style="padding:0;margin:0;display:block;" href="#/{{subNavItem.href}}">
+        <a ng-click="toggleNav()" ng-repeat="subNavItem in link.subNav" style="padding:0;margin:0;display:block;" href="#/{{subNavItem.href}}">
           <span>{{subNavItem.title}}</span>
         </a>
       </div>

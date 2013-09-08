@@ -37,8 +37,8 @@ exports.config = {
     //
     // Spec patterns are relative to the location of this config.
     specs: [
-//        'spec/*_spec.js',
-        'test/e2e/**/*.js'
+//        '../spec/*_spec.js'
+        '../test/e2e/controllers/mobileNav.coffee'
 //        '.tmp/spec/directives/mobileNav.js'
     ],
 
@@ -52,9 +52,6 @@ exports.config = {
         'browserName': 'chrome'
     },
 
-    plugins: [
-        'protractor-coffee-preprocessor'
-    ],
 
     // A base URL for your application under test. Calls to protractor.get()
     // with relative paths will be prepended with this.
@@ -63,8 +60,6 @@ exports.config = {
     // Selector for the element housing the angular app - this defaults to
     // body, but is necessary if ng-app is on a descendant of <body>
     rootElement: 'body',
-
-
 
     // ----- Options to be passed to minijasminenode -----
     jasmineNodeOpts: {
