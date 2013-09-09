@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <title>AMC</title>
     <meta name="description" content="">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -25,7 +26,7 @@
     <div ng-controller="MainCtrl">
 
       <div ng-controller="SearchbarCtrl" ready-search="isReady">
-        <header class="navbar navbar-inverse"
+        <header class="navbar navbar-inverse navbar-fixed-top"
                 role="banner"
                 ng-include="'views/partials/header.html'"></header>
       </div>
@@ -43,6 +44,16 @@
 
       </div>
 
+    </div>
+    <div ng-controller="MarketplanCtrl">
+      <div toggle-market-plan="isClosed">
+        <p>Market Plan Stuff!</p>
+      </div>
+      <nav style="text-align:center;" class="navbar navbar-default navbar-inverse navbar-fixed-bottom" role="navigation">
+        <ul class="nav navbar-nav">
+          <li><a href="" ng-click="toggleMarketPlan()">Market Plan</a></li>
+        </ul>
+      </nav>
     </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -123,6 +134,15 @@
       <!-- Animations -->
       <script src="scripts/animations/animations.js"></script>
       <script src="scripts/animations/searchFieldAnimation.js"></script>
+      <script src="scripts/controllers/marketPlan.js"></script>
       <!-- endbuild -->
-</body>
+    <script>
+       window.addEventListener("load", function () {
+         setTimeout(function () {
+           window.scrollTo(0, 1);
+         }, 0);
+       });
+    </script>
+
+     </body>
 </html>
