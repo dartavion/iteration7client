@@ -29,7 +29,8 @@
 
         <header class="navbar navbar-inverse"
                 role="banner"
-                ng-controller="HeaderCtrl"
+                ready-search="isReady"
+                ng-controller="SearchbarCtrl"
                 ng-include="'views/partials/header.html'"></header>
 
         <div class="drawer">
@@ -114,11 +115,15 @@
         <script src="scripts/controllers/collections.js"></script>
         <script src="scripts/controllers/travel.js"></script>
         <script src="scripts/controllers/contact.js"></script>
+        <script src="scripts/controllers/searchBar.js"></script>
         <!-- Directives -->
         <script src="scripts/directives/drawer.js"></script>
         <script src="scripts/directives/toggleDrawer.js"></script>
+        <script src="scripts/directives/readySearch.js"></script>
         <!-- Animations -->
         <script src="scripts/animations/animations.js"></script>
+        <script src="scripts/animations/searchFieldAnimation.js"></script>
+        <script src="scripts/directives/readySearch2.js"></script>
         <!-- endbuild -->
 </body>
 </html>

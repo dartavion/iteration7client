@@ -8,6 +8,5 @@ angular.module('AMCClientApp')
         then $animate.addClass element, 'open-drawer'
         else $animate.removeClass element, 'open-drawer'
     restrict: 'A'
-    replace: true
     link: linker
 

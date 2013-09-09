@@ -3,10 +3,41 @@
     <i class="glyphicon glyphicon-search"></i>
   </span>
 
-  <input type="text" class="form-control">
+  <input class="form-control"
+         type="text"
+         ng-click="openSearch()">
+
   <span class="input-group-btn">
+    <button class="btn btn-default"
+            type="button"
+            ng-if="!isReady"
+            ng-click="closeSearch()">
+      Cancel
+    </button>
     <button class="btn btn-default" type="button">
       <i class="glyphicon glyphicon-camera"></i>
     </button>
   </span>
+</div>
+<div ng-if="!isReady" style="position:fixed;top:60px;left:0;right:0;bottom:0;z-index:1000;background-color:#fff;margin:0;">
+  <ul>
+    <li>
+      <a>Link</a>
+    </li>
+    <li>
+      <a>Link</a>
+    </li>
+    <li>
+      <a>Link</a>
+    </li>
+    <li>
+      <a>Link</a>
+    </li>
+    <li>
+      <a>Link</a>
+    </li>
+    <li>
+      <a>Link</a>
+    </li>
+  </ul>
 </div>
