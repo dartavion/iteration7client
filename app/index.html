@@ -24,20 +24,20 @@
 
     <div ng-controller="MainCtrl">
 
+      <div ng-controller="SearchbarCtrl" ready-search="isReady">
+        <header class="navbar navbar-inverse"
+                role="banner"
+                ng-include="'views/partials/header.html'"></header>
+      </div>
+
       <div class="main-view"
            toggle-drawer="isClosed">
 
-        <header class="navbar navbar-inverse"
-                role="banner"
-                ready-search="isReady"
-                ng-controller="SearchbarCtrl"
-                ng-include="'views/partials/header.html'"></header>
-
-        <div class="drawer">
+        <div class="drawer" style="padding-top:100px">
           <div ng-include="'views/partials/mobile-nav-links.html'"></div>
         </div>
 
-        <div class="container body-content"
+        <div class="body-content container"
              ng-click="bodyTouchListener()"
              ng-view=""></div>
 
@@ -72,57 +72,57 @@
     <!-- TODO: REMOVE THIS WHEN PRODUCTION - allows for image place holders via js -->
     <script src="bower_components/holderjs/holder.js"></script>
 
-        <!-- build:js scripts/plugins.js -->
-        <script src="bower_components/sass-bootstrap/js/affix.js"></script>
-        <script src="bower_components/sass-bootstrap/js/alert.js"></script>
-        <script src="bower_components/sass-bootstrap/js/dropdown.js"></script>
-        <script src="bower_components/sass-bootstrap/js/tooltip.js"></script>
-        <script src="bower_components/sass-bootstrap/js/modal.js"></script>
-        <script src="bower_components/sass-bootstrap/js/transition.js"></script>
-        <script src="bower_components/sass-bootstrap/js/button.js"></script>
-        <script src="bower_components/sass-bootstrap/js/popover.js"></script>
-        <script src="bower_components/sass-bootstrap/js/carousel.js"></script>
-        <script src="bower_components/sass-bootstrap/js/scrollspy.js"></script>
-        <script src="bower_components/sass-bootstrap/js/collapse.js"></script>
-        <script src="bower_components/sass-bootstrap/js/tab.js"></script>
-        <!-- endbuild -->
+      <!-- build:js scripts/plugins.js -->
+      <script src="bower_components/sass-bootstrap/js/affix.js"></script>
+      <script src="bower_components/sass-bootstrap/js/alert.js"></script>
+      <script src="bower_components/sass-bootstrap/js/dropdown.js"></script>
+      <script src="bower_components/sass-bootstrap/js/tooltip.js"></script>
+      <script src="bower_components/sass-bootstrap/js/modal.js"></script>
+      <script src="bower_components/sass-bootstrap/js/transition.js"></script>
+      <script src="bower_components/sass-bootstrap/js/button.js"></script>
+      <script src="bower_components/sass-bootstrap/js/popover.js"></script>
+      <script src="bower_components/sass-bootstrap/js/carousel.js"></script>
+      <script src="bower_components/sass-bootstrap/js/scrollspy.js"></script>
+      <script src="bower_components/sass-bootstrap/js/collapse.js"></script>
+      <script src="bower_components/sass-bootstrap/js/tab.js"></script>
+      <!-- endbuild -->
 
-        <!-- build:js scripts/modules.js -->
-        <script src="bower_components/angular-route/angular-route.js"></script>
-        <script src="bower_components/angular-animate/angular-animate.js"></script>
-        <script src="bower_components/angular-resource/angular-resource.js"></script>
-        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-        <script src="bower_components/angular-touch/angular-touch.js"></script>
+      <!-- build:js scripts/modules.js -->
+      <script src="bower_components/angular-route/angular-route.js"></script>
 
-        <!-- endbuild -->
+      <script src="bower_components/angular-resource/angular-resource.js"></script>
+      <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+      <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+      <script src="bower_components/angular-touch/angular-touch.js"></script>
+      <script src="bower_components/angular-animate/angular-animate.js"></script>
+      <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="bower_components/angularjs-swipe/swipe.js"></script>
-        <script src="bower_components/angularjs-swipe/swiper.js"></script>
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/exhibitor.js"></script>
-        <script src="scripts/controllers/exhibitors-list.js"></script>
-        <script src="scripts/controllers/exhibitor-detail.js"></script>
-        <script src="scripts/controllers/home.js"></script>
-        <script src="scripts/controllers/login.js"></script>
-        <script src="scripts/controllers/header.js"></script>
-        <script src="scripts/controllers/main.js"></script>
+      <!-- build:js({.tmp,app}) scripts/scripts.js -->
+      <script src="bower_components/angularjs-swipe/swipe.js"></script>
+      <script src="bower_components/angularjs-swipe/swiper.js"></script>
+      <script src="scripts/app.js"></script>
+      <script src="scripts/controllers/exhibitor.js"></script>
+      <script src="scripts/controllers/exhibitors-list.js"></script>
+      <script src="scripts/controllers/exhibitor-detail.js"></script>
+      <script src="scripts/controllers/home.js"></script>
+      <script src="scripts/controllers/login.js"></script>
+      <script src="scripts/controllers/header.js"></script>
+      <script src="scripts/controllers/main.js"></script>
 
-        <script src="scripts/controllers/markets.js"></script>
-        <script src="scripts/controllers/campusmap.js"></script>
-        <script src="scripts/controllers/services.js"></script>
-        <script src="scripts/controllers/collections.js"></script>
-        <script src="scripts/controllers/travel.js"></script>
-        <script src="scripts/controllers/contact.js"></script>
-        <script src="scripts/controllers/searchBar.js"></script>
-        <!-- Directives -->
-        <script src="scripts/directives/drawer.js"></script>
-        <script src="scripts/directives/toggleDrawer.js"></script>
-        <script src="scripts/directives/readySearch.js"></script>
-        <!-- Animations -->
-        <script src="scripts/animations/animations.js"></script>
-        <script src="scripts/animations/searchFieldAnimation.js"></script>
-        <!-- endbuild -->
+      <script src="scripts/controllers/markets.js"></script>
+      <script src="scripts/controllers/campusmap.js"></script>
+      <script src="scripts/controllers/services.js"></script>
+      <script src="scripts/controllers/collections.js"></script>
+      <script src="scripts/controllers/travel.js"></script>
+      <script src="scripts/controllers/contact.js"></script>
+      <script src="scripts/controllers/searchBar.js"></script>
+      <!-- Directives -->
+      <script src="scripts/directives/drawer.js"></script>
+      <script src="scripts/directives/toggleDrawer.js"></script>
+      <script src="scripts/directives/readySearch.js"></script>
+      <!-- Animations -->
+      <script src="scripts/animations/animations.js"></script>
+      <script src="scripts/animations/searchFieldAnimation.js"></script>
+      <!-- endbuild -->
 </body>
 </html>

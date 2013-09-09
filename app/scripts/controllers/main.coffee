@@ -16,6 +16,7 @@ angular.module('AMCClientApp')
     $rootScope.bodyTouchListener = () ->
       if not $scope.isClosed
         $rootScope.toggleNav()
+
 ]
 
 angular.module('AMCClientApp')

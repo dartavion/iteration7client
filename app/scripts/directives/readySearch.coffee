@@ -5,7 +5,7 @@ angular.module('AMCClientApp')
     linker = (scope, element, attrs) ->
       scope.$watch attrs.readySearch, (val) ->
         if val
-          $animate.addClass element, 'search-field'
+        then $animate.addClass element, 'search-field'
         else $animate.removeClass element, 'search-field'
     restrict: 'A'
     link: linker
