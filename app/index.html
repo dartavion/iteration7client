@@ -23,38 +23,33 @@
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script><![endif]-->
 
-    <div ng-controller="MainCtrl">
 
-      <div ng-controller="SearchbarCtrl" ready-search="isReady">
-        <header class="navbar navbar-inverse navbar-fixed-top"
-                role="banner"
-                ng-include="'views/partials/header.html'"></header>
-      </div>
+    <div ng-controller="SearchbarCtrl" ng-include="'views/partials/header.html'"></div>
 
-      <div class="main-view"
-           toggle-drawer="isClosed">
+    <nav class="side-nav"
+         ng-controller="MainCtrl"
+         ng-include="'views/partials/mobile-nav-links.html'">
+    </nav>
 
-        <div class="drawer" style="padding-top:100px">
-          <div ng-include="'views/partials/mobile-nav-links.html'"></div>
+    <div class="main-content" toggle-drawer="isClosed">
+      <div class="topcoat-button-bar" >
+        <div class="topcoat-button-bar__item">
+          <button class="topcoat-button-bar__button">Floor</button>
         </div>
-
-        <div class="body-content container"
-             ng-click="bodyTouchListener()"
-             ng-view=""></div>
-
+        <div class="topcoat-button-bar__item">
+          <button class="topcoat-button-bar__button">Agenda</button>
+        </div>
+        <div class="topcoat-button-bar__item">
+          <button class="topcoat-button-bar__button">Favorites</button>
+        </div>
       </div>
+      <div ng-view=""></div>
+    </div>
 
-    </div>
-    <div ng-controller="MarketplanCtrl">
-      <div toggle-market-plan="isClosed">
-        <p>Market Plan Stuff!</p>
-      </div>
-      <nav style="text-align:center;" class="navbar navbar-default navbar-inverse navbar-fixed-bottom" role="navigation">
-        <ul class="nav navbar-nav">
-          <li><a href="" ng-click="toggleMarketPlan()">Market Plan</a></li>
-        </ul>
-      </nav>
-    </div>
+
+
+
+
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -137,11 +132,25 @@
       <script src="scripts/controllers/marketPlan.js"></script>
       <!-- endbuild -->
     <script>
-       window.addEventListener("load", function () {
-         setTimeout(function () {
-           window.scrollTo(0, 1);
-         }, 0);
-       });
+//       window.addEventListener("load", function () {
+//         setTimeout(function () {
+//           window.scrollTo(0, 1);
+//         }, 0);
+//       });
+
+//       window.onload = function () {
+//
+//         var slideMenuButton = document.getElementById('slide-menu-button');
+//         slideMenuButton.onclick = function (e) {
+//           var cl = document.body.classList;
+//           if (cl.contains('left-nav')) {
+//             cl.remove('left-nav');
+//           } else {
+//             cl.add('left-nav');
+//           }
+//         };
+//
+//       }
     </script>
 
      </body>

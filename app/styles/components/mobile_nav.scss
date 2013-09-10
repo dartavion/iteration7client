@@ -1,93 +1,65 @@
-@import '../../bower_components/sass-bootstrap/lib/variables';
-@import '../../bower_components/sass-bootstrap/lib/mixins';
 
-// twitter override
-.navbar-toggle {float: left;}
-.mobile-nav{display:none;height:100%;}
-.login-button{
-  float:right;
-  margin: 7px 10px 0 0;
+.topcoat-navigation-bar {
+  position:absolute;
+  width:100%;
+  z-index:100;
 }
-@media (max-width: $screen-tablet) {
-  body{
-    overflow:auto;
+.side-nav {
+  display:block;
+  position:absolute;
+  top:0;
+  left:0;
+  width:320px;
+  height:100%;
+  background-color:#e5e9e8;
+}
+.side-nav__list__container {
+  border-top:none;
+  border-bottom:none;
+}
+.side-nav__list {
+  border-top:none;
+}
+.side-nav__list__item {
+  padding:0;
+}
+.side-nav__list__item.is-active {
+  background-color:#e5e9e8;
+}
+.side-nav__button {
+  display:block;
+  width:100%;
+  height:100%;
+  padding: 1.25rem;
+  box-sizing: border-box;
+  color: #000;
+  text-decoration:none;
+}
+.side-nav__button:hover {
+  background-color:#e5e9e8;
+}
+.side-nav__button:active {
+  background-color:#e5e9e8;
+}
+.main-content {
+  position: absolute;
+  background: inherit;
+  left: 0;
+  padding-top:4rem;
+  width:100%;
+  height:100%;
+  -moz-box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.57);
+  -webkit-box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.57);
+  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.57);
+}
+@media screen and (min-width: 640px) { /* @media screen and (min-width: 880px) { */
+  .slide-menu-button {
+    display:none;
   }
-
-  .main-view{
-    height: 100%;
-    display:-moz-box;
-    display:-webkit-box;
-    display: box;
-    text-align: left;
-    width:100%;
-    position:absolute;
-    bottom:0;
-  }
-
-  .drawer{
-    position:absolute;
-    -webkit-overflow-scrolling: touch;
-    -moz-box-orient: vertical;
-    -webkit-box-orient: vertical;
-    box-orient: vertical;
-    -webkit-box-ordinal-group: 1;
-    -webkit-box-flex: 1;
-    width: 260px;
-    left:-260px;
-    display:block;
-    background-color: #222;
-    overflow-y: auto;
-    bottom:0;
-    top:0;
-    height: 100%;
-  }
-
-  .body-content{
-    -webkit-overflow-scrolling: touch;
-    bottom:0;
-    top:0;
-    padding-top: 120px;
-    overflow-y:auto;
-    -moz-box-orient: vertical;
-    -webkit-box-orient: vertical;
-    box-orient: vertical;
-    -webkit-box-ordinal-group: 2;
-    width: 100%;
-  }
-
-  .side-nav ul{
-    padding: 20px 20px 10px 20px;
-    list-style:none;
-
-    a{
-      color: #5d5d5d;
-      display:block;
-      margin: 0;
-      padding: 5px 0 5px 10px;
-      font-size: 1.2em;
-      .glyphicon{
-        float:right;
-      }
-      &:hover{
-        color: #fff;
-        text-decoration: none;
-      }
-      &:active{
-        color: #fff;
-      }
-      &.active{
-        color: #fff;
-      }
-    }
-  }
-
-  // twitter override
-  .navbar-brand {
-    float:left;
-  }
-  // twitter override
-  .navbar-toggle {
-    margin-left: 10px;
+  .main-content {
+    left:320px;
+    right:0;
+    width:auto;
   }
 }
 
