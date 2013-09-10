@@ -32,18 +32,20 @@
     </nav>
 
     <div class="main-content" toggle-drawer="isClosed">
-      <div class="topcoat-button-bar" >
-        <div class="topcoat-button-bar__item">
-          <button class="topcoat-button-bar__button">Floor</button>
-        </div>
-        <div class="topcoat-button-bar__item">
-          <button class="topcoat-button-bar__button">Agenda</button>
-        </div>
-        <div class="topcoat-button-bar__item">
-          <button class="topcoat-button-bar__button">Favorites</button>
+      <div style="padding:15px 5px 10px 5px;background-color: gray;text-align:center;">
+        <div class="topcoat-button-bar full" >
+          <div class="topcoat-button-bar__item">
+            <button class="topcoat-button-bar__button full">Floor</button>
+          </div>
+          <div class="topcoat-button-bar__item">
+            <button class="topcoat-button-bar__button full">Agenda</button>
+          </div>
+          <div class="topcoat-button-bar__item">
+            <button class="topcoat-button-bar__button full">Favorites</button>
+          </div>
         </div>
       </div>
-      <div ng-view=""></div>
+      <div style="height:100%" ng-view=""></div>
     </div>
 
 

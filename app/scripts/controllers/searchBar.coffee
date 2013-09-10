@@ -5,7 +5,8 @@ angular.module('AMCClientApp')
 
     $rootScope.isReady = false
 
-    $rootScope.toggleSearch = () ->
+    $scope.toggleSearch = () ->
+      console.log 'hrm'
       $rootScope.isReady = not $rootScope.isReady
 
     $rootScope.closeSearch = () ->

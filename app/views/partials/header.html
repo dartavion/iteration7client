@@ -1,5 +1,4 @@
-<div class="topcoat-navigation-bar" toggle-drawer="isClosed"
-        search-toggle-animation="isReady">
+<div class="topcoat-navigation-bar" toggle-drawer="isClosed">
   <div class="topcoat-navigation-bar__item left quarter">
 
     <a id="slide-menu-button"
@@ -11,10 +10,15 @@
   </div>
   <div class="topcoat-navigation-bar__item center half">
     <h1 class="topcoat-navigation-bar__title">America's Mart</h1>
+    <div search-toggle-animation="isReady" style="position:absolute;z-index:1000">
+      <input type="search" value="" placeholder="search" class="topcoat-search-input">
+    </div>
   </div>
   <div class="topcoat-navigation-bar__item right quarter">
     <a ng-click="toggleSearch()" class="topcoat-icon-button">
       <span class="glyphicon glyphicon-search"></span>
     </a>
+
   </div>
+
 </div>
