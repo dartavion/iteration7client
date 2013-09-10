@@ -32,26 +32,13 @@
     </nav>
 
     <div class="main-content" toggle-drawer="isClosed">
-      <div style="padding:15px 5px 10px 5px;background-color: gray;text-align:center;">
-        <div class="topcoat-button-bar full" >
-          <div class="topcoat-button-bar__item">
-            <button class="topcoat-button-bar__button full">Floor</button>
-          </div>
-          <div class="topcoat-button-bar__item">
-            <button class="topcoat-button-bar__button full">Agenda</button>
-          </div>
-          <div class="topcoat-button-bar__item">
-            <button class="topcoat-button-bar__button full">Favorites</button>
-          </div>
-        </div>
-      </div>
-      <div style="height:100%" ng-view=""></div>
+
+      <div ng-controller="SearchbuttonbarCtrl"
+           ng-include="'views/partials/search-context-buttons.html'"></div>
+
+      <div ng-click="bodyTouchListener()" style="min-height:100%;padding:10px;" ng-view=""></div>
+
     </div>
-
-
-
-
-
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -132,6 +119,7 @@
       <script src="scripts/animations/animations.js"></script>
       <script src="scripts/animations/searchFieldAnimation.js"></script>
       <script src="scripts/controllers/marketPlan.js"></script>
+      <script src="scripts/controllers/searchButtonBar.js"></script>
       <!-- endbuild -->
     <script>
 //       window.addEventListener("load", function () {
