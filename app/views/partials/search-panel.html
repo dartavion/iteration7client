@@ -2,17 +2,17 @@
   <input type="text" class="topcoat-text-input" placeholder="Search" value="">
   <button class="topcoat-button"
         ng-click="toggleSearch()">Cancel</button>
-</div>
+
 
 <div class="topcoat-list__container side-nav__list__container">
     <ul class="topcoat-list side-nav__list"
-            ng-repeat="link in navModel.list">
+            ng-repeat="link in browseByModel.list">
 
       <li class="topcoat-list__item side-nav__list__item">
         <a ng-click="!link.subNav ? toggleNav() : ''" class="side-nav__button" data-toggle="collapse" data-parent="#side-nav" data-target="#c{{$index}}" ng-href="{{link.href ? '#/' + link.href : ''}}">
           <img class="img" data-src="holder.js/24x24/social"/>
           <span>{{link.title}}</span>
-          <i ng-show="link.subNav" class="glyphicon glyphicon-chevron-down"></i>
+          <i class="glyphicon glyphicon-chevron-right"></i>
         </a>
 
 
@@ -30,3 +30,5 @@
       <!--</li>-->
     </ul>
   </div>
+
+</div>

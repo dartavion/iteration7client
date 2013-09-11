@@ -7,23 +7,19 @@ angular.module('AMCClientApp')
 
 angular.module('AMCClientApp')
   .service 'browseByModel', () ->
-      home =
-        title: 'Home'
-        href: 'home'
+      favorites =
+        title: 'My Favorites'
 
-      markets =
-        title: 'Markets'
-        href: 'markets'
+      category =
+        title: 'Category'
 
-      campusmap =
-        title: 'Campus Map'
-        href: 'campusmap'
+      events =
+        title: 'Events'
 
       exhibitor =
-        title: 'All Exhibitors'
-        href: 'exhibitor'
+        title: 'Exhibitor'
 
-      login =
+      productline =
         title: 'Login'
         href: 'login'
 
@@ -113,16 +109,11 @@ angular.module('AMCClientApp')
         href: 'services'
 
       @list = [
-        home
-        markets
-        campusmap
+        favorites
+        category
+        events
         exhibitor
-        login
-        buyerService
-        exhibitorService
-        explore
-        travel
-        about
+        productline
       ]
       return
 
