@@ -1,22 +1,39 @@
-<script>
-  Holder.run({images: ".img", nocss: true})
-</script>
-
 <div ng-if="isNavDrawerOpen">
-  <div class="topcoat-list__container side-nav__list__container">
-    <ul class="topcoat-list side-nav__list"
-        ng-repeat="link in navModel.list">
 
-      <li class="topcoat-list__item side-nav__list__item">
-        <a ng-click="!link.subNav ? toggleNav() : ''" class="side-nav__button" data-toggle="collapse" data-parent="#side-nav" data-target="#c{{$index}}" ng-href="{{link.href ? '#/' + link.href : ''}}">
-          <img class="img" data-src="holder.js/24x24/social"/>
+  <div class="topcoat-list__container side-nav__list__container">
+
+    <ul class="topcoat-list side-nav__list"
+        style="width:250px">
+
+      <li class="topcoat-list__item side-nav__list__item"
+          ng-repeat="link in navModel.list">
+
+        <a class="side-nav__button"
+           data-toggle="collapse"
+           data-parent="#side-nav"
+           data-target="#c{{$index}}"
+           ng-href="{{link.href ? '#/' + link.href : ''}}"
+           ng-click="!link.subNav ? toggleNav() : ''" >
+
+          <img class="img"
+               data-src="holder.js/24x24/social"/>
+
           <span>{{link.title}}</span>
-          <i ng-show="link.subNav" class="glyphicon glyphicon-chevron-down"></i>
+          <i class="glyphicon glyphicon-chevron-down"
+             ng-show="link.subNav"></i>
         </a>
 
+        <div id="c{{$index}}"
+             class="collapse"
+             ng-show="link.subNav"
+             ng-class="sub_nav_class"
+             style="padding:0;margin:0;">
 
-        <div id="c{{$index}}" ng-show="link.subNav" ng-class="sub_nav_class" class="collapse" style="padding:0;margin:0;">
-          <a ng-click="toggleNav()" ng-repeat="subNavItem in link.subNav" style="padding:0;margin:0;display:block;" href="/#/{{subNavItem.href}}">
+          <a ng-click="toggleNav()"
+             ng-repeat="subNavItem in link.subNav"
+             style="padding:0;margin:0;display:block;"
+             href="/#/{{subNavItem.href}}">
+
             <span>{{subNavItem.title}}</span>
           </a>
         </div>

@@ -1,24 +1,50 @@
-<div id="browse-by-nav" ng-if="isSearchDrawerOpen">
-  <input type="text" class="topcoat-text-input" placeholder="Search" value="">
-  <button class="topcoat-button"
-        ng-click="toggleSearch()">Cancel</button>
+<div ng-if="isSearchDrawerOpen">
+
+  <div style="padding:10px;text-align: center;">
+    <input class="topcoat-text-input"
+           type="text"
+           placeholder="Search"
+           ng-click="displaySearch()"
+           value="">
+
+    <button class="topcoat-button"
+            ng-click="toggleSearch();hideSearch()">Cancel</button>
+  </div>
 
   <div ng-include="'views/partials/alphabet-nav.html'"></div>
 
   <div class="topcoat-list__container side-nav__list__container">
-    <ul class="topcoat-list side-nav__list"
-            ng-repeat="link in browseByModel.list">
 
-      <li class="topcoat-list__item side-nav__list__item">
-        <a class="side-nav__button" data-toggle="collapse" data-parent="#browse-by-nav" data-target="#c{{$index}}" ng-href="{{link.href ? '#/' + link.href : ''}}">
-          <img class="img" data-src="holder.js/24x24/social"/>
+    <ul class="topcoat-list side-nav__list">
+
+      <li class="topcoat-list__item side-nav__list__item"
+          ng-repeat="link in browseByModel.list">
+
+        <a class="side-nav__button"
+           data-toggle="collapse"
+           data-parent="#browse-by-nav"
+           data-target="#c{{$index}}"
+           ng-href="{{link.href ? '#/' + link.href : ''}}">
+
+          <img class="img"
+               data-src="holder.js/24x24/social"/>
+
           <span>{{link.title}}</span>
-          <i ng-show="link.subNav" class="glyphicon glyphicon-chevron-down"></i>
+
+          <i class="glyphicon glyphicon-chevron-down"
+             ng-show="link.subNav"></i>
         </a>
 
+        <div id="c{{$index}}"
+             class="collapse"
+             ng-show="link.subNav"
+             ng-class="sub_nav_class"
+             style="padding:0;margin:0;">
 
-        <div id="c{{$index}}" ng-show="link.subNav" ng-class="sub_nav_class" class="collapse" style="padding:0;margin:0;">
-          <a ng-click="toggleNav()" ng-repeat="subNavItem in link.subNav" style="padding:0;margin:0;display:block;" href="/#/{{subNavItem.href}}">
+          <a ng-repeat="subNavItem in link.subNav"
+             style="padding:0;margin:0;display:block;"
+             href="/#/{{subNavItem.href}}">
+
             <span>{{subNavItem.title}}</span>
           </a>
         </div>
@@ -32,4 +58,9 @@
     </ul>
   </div>
 
+</div>
+<div class="search-results"
+     style="background-color:#f4f4f4;opacity:0;position:absolute;z-index:100;top:100px;left:0;bottom:0;right:0;height:100%;"
+     display-search-results="isSearchResultsOpen">
+     <p>Search Results</p>
 </div>

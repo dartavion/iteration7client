@@ -16,7 +16,7 @@
 .side-nav__list__container {
   border-top:none;
   border-bottom:none;
-  width:320px;
+  width:100%;
 }
 .side-nav__list {
   border-top:none;
@@ -60,6 +60,9 @@
   top:0;
   left:0;
   width:100%;
+}
+.glyphicon.glyphicon-chevron-down{
+  float:right;
 }
 
 @media screen and (min-width: 640px) { /* @media screen and (min-width: 880px) { */
