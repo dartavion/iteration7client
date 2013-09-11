@@ -1,8 +1,8 @@
 angular.module('AMCClientApp')
   .animation '.open-search', ($window) ->
-
+    width = document.body.clientWidth
     addClass: (element, className, done) ->
-      TweenMax.to(element, .2, {left: -$window.innerWidth, ease:Power2.easeIn})
+      TweenMax.to(element, .2, {left: -width, ease:Power2.easeIn})
       return
 
     removeClass: (element, className) ->
