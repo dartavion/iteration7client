@@ -5,16 +5,16 @@ angular.module('AMCClientApp')
 
     $scope.navModel = navModel
 
-    $rootScope.isClosed = false
+    $rootScope.isNavDrawerOpen = false
 
     $scope.navIsSelected = (navItem) ->
       navItem is navModel.selectedItem
 
     $rootScope.toggleNav = () ->
-      $rootScope.isClosed = not $rootScope.isClosed
+      $rootScope.isNavDrawerOpen = not $rootScope.isNavDrawerOpen
 
     $rootScope.bodyTouchListener = () ->
-      if $scope.isClosed
+      if $scope.isNavDrawerOpen
         $rootScope.toggleNav()
 
 ]

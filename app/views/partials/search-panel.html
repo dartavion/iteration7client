@@ -1,11 +1,12 @@
-<script>
-  Holder.run({images: ".img", nocss: true})
-</script>
+<div ng-if="isSearchDrawerOpen">
+  <input type="text" class="topcoat-text-input" placeholder="Search" value="">
+  <button class="topcoat-button"
+        ng-click="toggleSearch()">Cancel</button>
+</div>
 
-<div ng-if="isNavDrawerOpen">
-  <div class="topcoat-list__container side-nav__list__container">
+<div class="topcoat-list__container side-nav__list__container">
     <ul class="topcoat-list side-nav__list"
-        ng-repeat="link in navModel.list">
+            ng-repeat="link in navModel.list">
 
       <li class="topcoat-list__item side-nav__list__item">
         <a ng-click="!link.subNav ? toggleNav() : ''" class="side-nav__button" data-toggle="collapse" data-parent="#side-nav" data-target="#c{{$index}}" ng-href="{{link.href ? '#/' + link.href : ''}}">
@@ -29,5 +30,3 @@
       <!--</li>-->
     </ul>
   </div>
-
-</div>

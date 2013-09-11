@@ -31,7 +31,14 @@
          ng-include="'views/partials/mobile-nav-links.html'">
     </nav>
 
-    <div class="main-content" toggle-drawer="isClosed">
+    <div class="search-panel"
+         ng-controller="SearchresultsCtrl"
+         ng-include="'views/partials/search-panel.html'">
+    </div>
+
+    <div class="main-content"
+         toggle-search="isSearchDrawerOpen"
+         toggle-drawer="isNavDrawerOpen">
 
       <div ng-controller="SearchbuttonbarCtrl"
            ng-include="'views/partials/search-context-buttons.html'"></div>
@@ -114,12 +121,13 @@
       <!-- Directives -->
       <script src="scripts/directives/drawer.js"></script>
       <script src="scripts/directives/toggleDrawer.js"></script>
-      <script src="scripts/directives/readySearch.js"></script>
+      <script src="scripts/directives/toggleSearch.js"></script>
       <!-- Animations -->
-      <script src="scripts/animations/animations.js"></script>
-      <script src="scripts/animations/searchFieldAnimation.js"></script>
+      <script src="scripts/animations/toggleDrawerAnimation.js"></script>
+      <script src="scripts/animations/toggleSearchAnimation.js"></script>
       <script src="scripts/controllers/marketPlan.js"></script>
       <script src="scripts/controllers/searchButtonBar.js"></script>
+      <script src="scripts/controllers/searchResults.js"></script>
       <!-- endbuild -->
     <script>
 //       window.addEventListener("load", function () {
