@@ -1,18 +1,19 @@
-<div ng-if="isSearchDrawerOpen">
+<div id="browse-by-nav" ng-if="isSearchDrawerOpen">
   <input type="text" class="topcoat-text-input" placeholder="Search" value="">
   <button class="topcoat-button"
         ng-click="toggleSearch()">Cancel</button>
 
+  <div ng-include="'views/partials/alphabet-nav.html'"></div>
 
-<div class="topcoat-list__container side-nav__list__container">
+  <div class="topcoat-list__container side-nav__list__container">
     <ul class="topcoat-list side-nav__list"
             ng-repeat="link in browseByModel.list">
 
       <li class="topcoat-list__item side-nav__list__item">
-        <a ng-click="!link.subNav ? toggleNav() : ''" class="side-nav__button" data-toggle="collapse" data-parent="#side-nav" data-target="#c{{$index}}" ng-href="{{link.href ? '#/' + link.href : ''}}">
+        <a class="side-nav__button" data-toggle="collapse" data-parent="#browse-by-nav" data-target="#c{{$index}}" ng-href="{{link.href ? '#/' + link.href : ''}}">
           <img class="img" data-src="holder.js/24x24/social"/>
           <span>{{link.title}}</span>
-          <i class="glyphicon glyphicon-chevron-right"></i>
+          <i ng-show="link.subNav" class="glyphicon glyphicon-chevron-down"></i>
         </a>
 
 

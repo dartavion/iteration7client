@@ -5,6 +5,7 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 //@import "../bower_components/sass-bootstrap/lib/bootstrap";
 @import "../bower_components/sass-bootstrap/lib/variables";
 @import "../bower_components/sass-bootstrap/lib/mixins";
+@import "../bower_components/sass-bootstrap/lib/scaffolding";
 @import "../bower_components/sass-bootstrap/lib/glyphicons";
 @import "../bower_components/sass-bootstrap/lib/component-animations";
 @import "../bower_components/sass-bootstrap/lib/modals";
@@ -17,4 +18,7 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 @import "base/base";
 @import "base/fonts";
 
+// COMPONENTS
 @import "components/mobile_nav";
+@import "components/exhibitor_detail";
+@import "components/exhibitors_list";

@@ -20,93 +20,19 @@ angular.module('AMCClientApp')
         title: 'Exhibitor'
 
       productline =
-        title: 'Login'
-        href: 'login'
-
-      buyerService =
-        title: 'Buyer Services'
-        href: ''
+        title: 'Product Line'
         subNav: []
 
-      buyerService.subNav[0] =
-        title: 'First Time to Market'
-        href: 'services'
-
-      buyerService.subNav[1] =
-        title: 'My Market Plan'
-        href: 'services'
-
-      buyerService.subNav[2] =
-        title: 'Education Center'
-        href: 'services'
-
-      exhibitorService =
-        title: 'Exhibitor Services'
-        href: ''
+      guidebook =
+        title: 'Guide Book'
         subNav: []
 
-      exhibitorService.subNav[0] =
-        title: 'First Time to Market'
-        href: 'services'
+      guidebook.subNav[0] =
+        title: 'Market Wednesday'
 
-      exhibitorService.subNav[1] =
-        title: 'My Market Plan'
-        href: 'services'
+      services =
+        title: 'Services'
 
-      exhibitorService.subNav[2] =
-        title: 'Education Center'
-        href: 'services'
-
-      explore =
-        title: 'Explore the Collections'
-        href: ''
-        subNav: []
-
-      explore.subNav[0] =
-        title: 'First Time to Market'
-        href: 'services'
-
-      explore.subNav[1] =
-        title: 'My Market Plan'
-        href: 'services'
-
-      explore.subNav[2] =
-        title: 'Education Center'
-        href: 'services'
-
-      travel =
-        title: 'Travel + Market Info'
-        href: ''
-        subNav: []
-
-      travel.subNav[0] =
-        title: 'First Time to Market'
-        href: 'services'
-
-      travel.subNav[1] =
-        title: 'My Market Plan'
-        href: 'services'
-
-      travel.subNav[2] =
-        title: 'Education Center'
-        href: 'services'
-
-      about =
-        title: 'About Us + Contact'
-        href: ''
-        subNav: []
-
-      about.subNav[0] =
-        title: 'First Time to Market'
-        href: 'services'
-
-      about.subNav[1] =
-        title: 'My Market Plan'
-        href: 'services'
-
-      about.subNav[2] =
-        title: 'Education Center'
-        href: 'services'
 
       @list = [
         favorites
@@ -114,6 +40,8 @@ angular.module('AMCClientApp')
         events
         exhibitor
         productline
+        guidebook
+        services
       ]
       return
 
