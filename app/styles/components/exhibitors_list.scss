@@ -20,11 +20,98 @@ li.exh-accordion-body {
 
 .exh-pages-wrapper {
   overflow-x: auto;
-  padding-left: 15px;
-  padding-right: 15px;
   -webkit-overflow-scrolling: touch;
 }
 
 .exh-pages {
   width: 960px;
+}
+
+div.company-info-container{
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+
+  ul.thumbnail-list {
+    list-style: none;
+    padding: 10px;
+    width: 880px;
+    clear: both;
+    overflow: hidden;
+
+    > li {
+      position: relative;
+      width: 32.5%;
+      height: 280px;
+      // min-height: 280px;
+      outline: 1px #ddd solid;
+      // display: inline-block;
+      float: left;
+      margin-right: 10px;
+      background-color: #e8e9e9;
+
+      &.prodlines {
+        ul {
+          font-size: 18px;
+          color: #6d6d6d;
+        }
+      }
+      
+      &.about, &.prodlines {
+        text-align: left;
+
+        div.inner-block {
+          padding: 10px;
+
+          h2 {
+            text-align: left;
+          }
+
+          p {
+            font-family: Helvetica, Arial, sans-serif;
+            color: #6d6d6d;
+            font-size: 18px;
+            line-height: 1em;
+          }
+        }
+      }
+
+      div.inner-block {
+
+        h2 {
+          text-align: center;
+          color: #808285;
+          margin-top: 0;
+
+          &.adress {
+            margin: 0;
+            color: #9FA2A7;
+
+            span.badge {
+              font-size: 20px;
+            }
+          }
+        }
+
+        div.logo {
+          margin: 20px auto 10px;
+          width: 200px;
+          height: 75px;
+          outline: 1px black solid;
+          font-size: 48px;
+          line-height: 72px;
+          text-align: center;
+        }
+      }
+
+      button.add_to_market_plan {
+        position: absolute;
+        bottom: 0;
+        border-radius: 0; 
+      }
+    }
+
+    li:last-child {
+      margin-right: 0;
+    }
+  }
 }
