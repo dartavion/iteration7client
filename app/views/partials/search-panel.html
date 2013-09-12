@@ -5,7 +5,10 @@
            type="text"
            placeholder="Search"
            ng-click="displaySearch()"
-           value="">
+           ng-keyup="search()"
+           ng-model="searchField">
+
+    {{seachField}}
 
     <button class="topcoat-button"
             ng-click="toggleSearch();hideSearch()">Cancel</button>

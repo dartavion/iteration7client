@@ -1,7 +1,8 @@
 'use strict'
 
 angular.module('AMCClientApp')
-  .controller 'SearchresultsCtrl', ['$scope', 'browseByModel', ($scope, browseByModel) ->
+  .controller 'SearchresultsCtrl', ['$scope', 'browseByModel', 'ejsResource', ( $scope, browseByModel, ejsResource) ->
+
     $scope.browseByModel = browseByModel
 
     $scope.isSearchResultsOpen = false
@@ -12,6 +13,17 @@ angular.module('AMCClientApp')
     $scope.hideSearch = () ->
       $scope.isSearchResultsOpen = false
 
+    $scope.search = () ->
+
+      console.log(this.searchField)
+      if this.searchField.length > 3
+        ejs = ejsResource('http://localhost:9200')
+
+        $scope.results = ejs.Request()
+            .indices("amc") 
+            .types("exhibitor")
+            .query(ejs.TermQuery("user", this.searchField))
+            .doSearch();
   ]
 
 angular.module('AMCClientApp')
