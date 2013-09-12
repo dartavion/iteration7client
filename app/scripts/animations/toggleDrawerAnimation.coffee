@@ -3,9 +3,11 @@ angular.module('AMCClientApp')
   .animation '.open-drawer', ($window) ->
 
     addClass: (element, className, done) ->
-      TweenMax.to(element, .2, {left: 250, ease:Power2.easeIn})
+      TweenMax.set(element, {z:0.1})
+      TweenMax.to(element, .3, {x: 250, ease:Power2.easeInOut})
       return
 
     removeClass: (element, className) ->
-      TweenMax.to(element, .2, {left: 0, ease:Power2.easeInOut})
+      TweenMax.set(element, {z:0.1})
+      TweenMax.to(element, .3, {x: 0, ease:Power2.easeInOut})
       return
