@@ -9,7 +9,7 @@
            ng-model="searchField">
     <button class="topcoat-icon-button--quiet">
       <span class="topcoat-icon" style="background-color:#A5A7A7;"></span>
-</button>
+    </button>
 
     {{seachField}}
 
@@ -56,12 +56,14 @@
       </li>
     </ul>
   </div>
-
 </div>
+
 <div class="search-results"
      ng-class="{'show-search-results' : isSearchResultsOpen}"
      display-search-results="isSearchResultsOpen">
+
   <p>Search Results</p>
+
   <ul ng-repeat="result in results.hits.hits">
     <li>
       <a href="#/exhibitor/{{result._id}}">
