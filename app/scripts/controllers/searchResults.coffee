@@ -15,14 +15,20 @@ angular.module('AMCClientApp')
 
     $scope.search = () ->
 
-      console.log(this.searchField)
       if this.searchField.length > 3
         ejs = ejsResource('http://localhost:9200')
 
         $scope.results = ejs.Request()
             .indices("amc") 
             .types("exhibitor")
-            .query(ejs.TermQuery("user", this.searchField))
+            .fields([
+              'EXHIBNAME',
+              'CATEGORIES.EXHIBCATNAME',
+              'BOOTHREQUESTS.BOOTHS.SHOW.SHOWDESC'
+            ])
+            .query(
+              ejs.QueryStringQuery().defaultField('_all').query(this.searchField)
+            )
             .doSearch();
   ]
 
