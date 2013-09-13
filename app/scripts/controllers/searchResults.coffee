@@ -21,7 +21,14 @@ angular.module('AMCClientApp')
         $scope.results = ejs.Request()
             .indices("amc") 
             .types("exhibitor")
-            .query(ejs.TermQuery("user", this.searchField))
+            .fields([
+              'EXHIBNAME',
+              'CATEGORIES.EXHIBCATNAME',
+              'BOOTHREQUESTS.BOOTHS.SHOW.SHOWDESC'
+            ])
+            .query(
+              ejs.QueryStringQuery().defaultField('_all').query(this.searchField)
+            )
             .doSearch();
   ]
 

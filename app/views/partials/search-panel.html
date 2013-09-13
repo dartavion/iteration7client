@@ -63,4 +63,11 @@
      ng-class="{'show-search-results' : isSearchResultsOpen}"
      display-search-results="isSearchResultsOpen">
      <p>Search Results</p>
+     <ul ng-repeat="result in results.hits.hits">
+        <li>
+          <a href="#/exhibitor/{{result._id}}">
+            {{result.fields.EXHIBNAME}}
+          </a>
+        </li>
+     </ul>
 </div>
