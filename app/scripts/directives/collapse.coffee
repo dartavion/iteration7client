@@ -10,7 +10,11 @@ angular.module('AMCClientApp')
         $animate.addClass element, 'collapse'
 
         if args.id is element[0].id
+          if element.hasClass('collapse')
             $animate.removeClass element, 'collapse'
+          else
+            $animate.addClass element, 'collapse'
+
 
     restrict: 'A'
     link: linker
