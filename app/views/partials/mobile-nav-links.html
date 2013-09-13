@@ -11,7 +11,7 @@
 
         <a class="side-nav__button"
            ng-href="{{link.href ? '#/' + link.href : ''}}"
-           ng-click="!link.subNav ? toggleNav() : toggleListItem('item-'+$index, isCollapsed)" >
+           ng-click="!link.subNav ? toggleNav() : toggleListItem('nav-'+$index, isCollapsed)" >
 
           <img class="img"
                data-src="holder.js/24x24/social"/>
@@ -21,7 +21,7 @@
              ng-show="link.subNav"></i>
         </a>
 
-        <div id="item-{{$index}}"
+        <div id="nav-{{$index}}"
              class="collapse"
              collapsed="isCollapsed"
              ng-show="link.subNav"

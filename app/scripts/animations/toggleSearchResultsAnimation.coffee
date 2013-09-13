@@ -7,5 +7,5 @@ angular.module('AMCClientApp')
       return
 
     removeClass: (element, className) ->
-      TweenLite.to(element, .2, {opacity: 0, ease:Power2.easeInOut})
+      TweenLite.to(element, .2, {opacity: 0, ease:Power2.easeIn})
       return

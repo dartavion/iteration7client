@@ -19,7 +19,7 @@ angular.module('AMCClientApp')
       if $scope.isNavDrawerOpen
         $rootScope.toggleNav()
 
-    $rootScope.toggleListItem = (id, isCollapsed) ->
+    $scope.toggleListItem = (id, isCollapsed) ->
 #      $rootScope.isCollapsed = not $rootScope.isCollapsed
       $rootScope.$broadcast('collapseChange', { 'id': id, 'isCollapsed': isCollapsed})
 
