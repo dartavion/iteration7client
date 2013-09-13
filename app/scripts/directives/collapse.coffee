@@ -7,10 +7,10 @@ angular.module('AMCClientApp')
       scope.$watch attrs.collapsed, 'onCollapseChange'
 
       scope.$on 'collapseChange', (event, args) ->
-        $animate.addClass element, 'collapser'
+        $animate.addClass element, 'collapse'
 
         if args.id is element[0].id
-            $animate.removeClass element, 'collapser'
+            $animate.removeClass element, 'collapse'
 
     restrict: 'A'
     link: linker

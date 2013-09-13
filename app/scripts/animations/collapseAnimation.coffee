@@ -1,9 +1,9 @@
 angular.module('AMCClientApp')
 
-  .animation '.collapser', ($window) ->
+  .animation '.collapse', ($window) ->
 
     addClass: (element, className, done) ->
-      TweenLite.set(element, {position: 'absolute'})
+#      TweenLite.set(element, {position: 'absolute'})
       TweenLite.to(element, .2, {height:'100%'})
       return
 
