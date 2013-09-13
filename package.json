@@ -11,7 +11,11 @@
     "cucumber": "~0.3.1",
     "grunt-cucumber": "~0.2.1",
     "selenium-webdriver": "~2.35.1",
-    "imagemin": "~0.1.2"
+    "imagemin": "~0.1.2",
+    "grunt-cli": "~0.1.9",
+    "bower": "~1.2.6",
+    "yo": "~1.0.4",
+    "generator-protractor": "~0.1.4"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

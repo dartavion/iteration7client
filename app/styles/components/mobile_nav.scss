@@ -1,16 +1,18 @@
 
 .topcoat-navigation-bar {
-  position:absolute;
+  position:fixed;
   width:100%;
   z-index:100;
 }
 .side-nav {
   display:block;
-  position:absolute;
+  position:fixed;
   top:0;
   left:0;
   width:100%;
   height:100%;
+  overflow-y:scroll;
+  -webkit-overflow-scrolling: touch;
   background-color:#e5e9e8;
 }
 .side-nav__list__container {
@@ -61,8 +63,24 @@
   left:0;
   width:100%;
 }
+.search-header{
+  width: 100%;
+  background-color: #f4f4f4;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  text-align: center;
+  -moz-box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.57);
+  -webkit-box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.57);
+  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.57);
+}
 .glyphicon.glyphicon-chevron-down{
   float:right;
+}
+.search-results{
+  z-index:0;
 }
 .show-search-results{
   background-color: #f4f4f4;

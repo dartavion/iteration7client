@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
 </head>
-  <body ng-app="AMCClientApp">
+  <body ng-app="AMCClientApp" class="no-scroll">
     <!--[if lt IE 7]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
 
@@ -64,12 +64,9 @@
        ga('create', 'UA-XXXXX-X');
        ga('send', 'pageview');
     </script>
-    <!-- TODO: REMOVE THIS WHEN PRODUCTION - allows for image place holders via js -->
-    <script src="bower_components/holderjs/holder.js"></script>
-    <script src="bower_components/gsap/src/uncompressed/plugins/CSSPlugin.js"></script>
-    <script src="bower_components/gsap/src/uncompressed/plugins/ScrollToPlugin.js"></script>
-    <script src="bower_components/gsap/src/uncompressed/TweenMax.js"></script>
-    <script src="bower_components/gsap/src/uncompressed/TimelineMax.js"></script>
+    <script src="bower_components/gsap/src/minified/plugins/CSSPlugin.min.js"></script>
+    <script src="bower_components/gsap/src/minified/TweenLite.min.js"></script>
+
     <script src="bower_components/jquery/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
 
@@ -86,7 +83,7 @@
       <script src="bower_components/sass-bootstrap/js/popover.js"></script>
       <script src="bower_components/sass-bootstrap/js/carousel.js"></script>
       <script src="bower_components/sass-bootstrap/js/scrollspy.js"></script>
-      <script src="bower_components/sass-bootstrap/js/collapse.js"></script>
+      <!--<script src="bower_components/sass-bootstrap/js/collapse.js"></script>-->
       <script src="bower_components/sass-bootstrap/js/tab.js"></script>
       <!-- endbuild -->
 
@@ -132,11 +129,19 @@
       <script src="scripts/directives/toggleDrawer.js"></script>
       <script src="scripts/directives/toggleSearch.js"></script>
       <script src="scripts/directives/displaySearchResults.js"></script>
+      <script src="scripts/directives/searchPanel.js"></script>
+
+      <script src="scripts/directives/collapse.js"></script>
 
       <!-- Animations -->
       <script src="scripts/animations/toggleDrawerAnimation.js"></script>
       <script src="scripts/animations/toggleSearchDrawerAnimation.js"></script>
       <script src="scripts/animations/toggleSearchResultsAnimation.js"></script>
+      <script src="scripts/animations/toggleSearchPanelFade.js"></script>
+      <script src="scripts/animations/collapseAnimation.js"></script>
+
+
+      <script src="scripts/services/searchService.js"></script>
 
       <!-- endbuild -->
     <script>

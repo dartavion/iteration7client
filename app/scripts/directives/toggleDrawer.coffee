@@ -10,3 +10,13 @@ angular.module('AMCClientApp')
     restrict: 'A'
     link: linker
 
+
+angular.module('AMCClientApp')
+.directive 'navPanel', ($timeout, $window, $animate) ->
+    linker = (scope, element, attrs) ->
+      scope.$watch attrs.navPanel, (value) ->
+        if value
+        then $animate.addClass element, 'fade-nav-panel'
+        else $animate.removeClass element, 'fade-nav-panel'
+    restrict: 'A'
+    link: linker

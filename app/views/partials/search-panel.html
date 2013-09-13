@@ -1,6 +1,6 @@
-<div ng-if="isSearchDrawerOpen">
+<div search-panel="isSearchPanelFaded" style="opacity:0">
 
-  <div style="padding:10px;text-align: center;">
+  <div class="search-header">
     <input class="topcoat-text-input"
            type="text"
            placeholder="Search"
@@ -14,9 +14,7 @@
             ng-click="toggleSearch();hideSearch()">Cancel</button>
   </div>
 
-  <div ng-include="'views/partials/alphabet-nav.html'"></div>
-
-  <div class="topcoat-list__container side-nav__list__container">
+  <div style="padding-top:57px;" class="topcoat-list__container side-nav__list__container">
 
     <ul class="topcoat-list side-nav__list">
 
@@ -24,10 +22,9 @@
           ng-repeat="link in browseByModel.list">
 
         <a class="side-nav__button"
-           data-toggle="collapse"
-           data-parent="#browse-by-nav"
-           data-target="#c{{$index}}"
+           ng-click="toggleListItem('item-'+$index, isCollapsed)"
            ng-href="{{link.href ? '#/' + link.href : ''}}">
+
 
           <img class="img"
                data-src="holder.js/24x24/social"/>
@@ -38,12 +35,12 @@
              ng-show="link.subNav"></i>
         </a>
 
-        <div id="c{{$index}}"
+        <div id="item-{{$index}}"
              class="collapse"
+             collapsed="isCollapsed"
              ng-show="link.subNav"
-             ng-class="sub_nav_class"
-             style="padding:0;margin:0;">
-
+             style="position:relative;padding:0;margin:0;">
+          <div ng-include="'views/partials/alphabet-nav.html'"></div>
           <a ng-repeat="subNavItem in link.subNav"
              style="padding:0;margin:0;display:block;"
              href="/#/{{subNavItem.href}}">
