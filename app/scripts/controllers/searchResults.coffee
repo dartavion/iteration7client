@@ -16,7 +16,7 @@ angular.module('AMCClientApp')
     $scope.search = () ->
 
       if this.searchField.length > 3
-        ejs = ejsResource('http://localhost:9200')
+        ejs = ejsResource('http://ec2-50-16-50-39.compute-1.amazonaws.com:9200')
 
         $scope.results = ejs.Request()
             .indices("amc") 

@@ -9,7 +9,7 @@ angular.module('AMCClientApp', ['swiper', 'ngRoute', 'ngAnimate', 'ngTouch', 'el
       .when '/exhibitors-list',
         templateUrl: 'views/exhibitors-list.html',
         controller: 'ExhibitorslistCtrl'
-      .when '/exhibitor-detail',
+      .when '/exhibitor/:id',
         templateUrl: 'views/exhibitor-detail.html',
         controller: 'ExhibitorDetail'
       .when '/exhibitor',
