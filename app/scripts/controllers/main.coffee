@@ -6,16 +6,22 @@ angular.module('AMCClientApp')
     $scope.navModel = navModel
 
     $rootScope.isNavDrawerOpen = false
+    $rootScope.isNavPanelFaded = false
 
     $scope.navIsSelected = (navItem) ->
       navItem is navModel.selectedItem
 
     $rootScope.toggleNav = () ->
+      $rootScope.isNavPanelFaded = not $rootScope.isNavPanelFaded
       $rootScope.isNavDrawerOpen = not $rootScope.isNavDrawerOpen
 
     $rootScope.bodyTouchListener = () ->
       if $scope.isNavDrawerOpen
         $rootScope.toggleNav()
+
+    $scope.toggleListItem = (id, isCollapsed) ->
+#      $rootScope.isCollapsed = not $rootScope.isCollapsed
+      $rootScope.$broadcast('collapseChange', { 'id': id, 'isCollapsed': isCollapsed})
 
 ]
 

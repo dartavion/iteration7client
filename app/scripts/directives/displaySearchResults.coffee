@@ -7,5 +7,6 @@ angular.module('AMCClientApp')
         if value
         then $animate.addClass element, 'show-search-results'
         else $animate.removeClass element, 'show-search-results'
+
     restrict: 'A'
     link: linker

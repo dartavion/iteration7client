@@ -69,15 +69,33 @@ angular.module('AMCClientApp')
         href: ''
         subNav: []
 
-      guidebook.subNav[0] =
-        title: 'Market Wednesday'
-        href: ''
-        subNav: []
-
       services =
         title: 'Services'
         href: ''
         subNav: []
+
+      for i in [0..10]
+        favorites.subNav[i] =
+          title: 'Lorem Ipsum'
+          href: 'http://www.google.com'
+        category.subNav[i] =
+          title: 'Lorem Ipsum'
+          href: 'http://www.google.com'
+        events.subNav[i] =
+          title: 'Lorem Ipsum'
+          href: 'http://www.google.com'
+        exhibitor.subNav[i] =
+          title: 'Lorem Ipsum'
+          href: 'http://www.google.com'
+        productline.subNav[i] =
+          title: 'Lorem Ipsum'
+          href: 'http://www.google.com'
+        guidebook.subNav[i] =
+          title: 'Lorem Ipsum'
+          href: 'http://www.google.com'
+        services.subNav[i] =
+          title: 'Lorem Ipsum'
+          href: 'http://www.google.com'
 
       @list = [
         favorites

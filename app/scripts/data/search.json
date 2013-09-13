@@ -1,0 +1,47 @@
+{
+  "COUNT": "7",
+  "EXHIBITORS": [
+    {
+      "NAME": "Claro Candles",
+      "HREF": "",
+      "LOCATION": {
+        "BUILDING": "1",
+        "FLOOR": "2",
+        "BOOTH": "D13"
+      },
+      "PHONE": "(253) 678-1173",
+      "FAX": ""
+
+    },
+    {
+      "NAME": "Grace Direct",
+      "LOCATION": {
+        "BUILDING": "2",
+        "FLOOR": "10",
+        "BOOTH": "19"
+      },
+      "PHONE": "(866) 515-9515",
+      "FAX": "(864) 573-7373"
+    },
+    {
+      "NAME": "Himalayan Handmade Candles",
+      "LOCATION": {
+        "BUILDING": "1",
+        "FLOOR": "7",
+        "BOOTH": "T07"
+      },
+      "PHONE": "(678) 705-3245",
+      "FAX": "(678) 705-3613"
+    },
+    {
+      "NAME": "Illusions Home & Candles",
+      "LOCATION": {
+        "BUILDING": "3",
+        "FLOOR": "2",
+        "BOOTH": "1803"
+      },
+      "PHONE": "(214) 240-4115",
+      "FAX": "(903) 833-5263"
+    }
+  ]
+}

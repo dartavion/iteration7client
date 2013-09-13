@@ -1,12 +1,15 @@
-<div ng-if="isSearchDrawerOpen">
+<div search-panel="isSearchPanelFaded" style="opacity:0">
 
-  <div style="padding:10px;text-align: center;">
+  <div class="search-header" style="position:relative">
     <input class="topcoat-text-input"
            type="text"
            placeholder="Search"
            ng-click="displaySearch()"
            ng-keyup="search()"
            ng-model="searchField">
+    <button class="topcoat-icon-button--quiet">
+      <span class="topcoat-icon" style="background-color:#A5A7A7;"></span>
+    </button>
 
     {{seachField}}
 
@@ -14,9 +17,7 @@
             ng-click="toggleSearch();hideSearch()">Cancel</button>
   </div>
 
-  <div ng-include="'views/partials/alphabet-nav.html'"></div>
-
-  <div class="topcoat-list__container side-nav__list__container">
+  <div style="padding-top:57px;" class="topcoat-list__container side-nav__list__container">
 
     <ul class="topcoat-list side-nav__list">
 
@@ -24,10 +25,9 @@
           ng-repeat="link in browseByModel.list">
 
         <a class="side-nav__button"
-           data-toggle="collapse"
-           data-parent="#browse-by-nav"
-           data-target="#c{{$index}}"
+           ng-click="toggleListItem('search-'+$index, isCollapsed)"
            ng-href="{{link.href ? '#/' + link.href : ''}}">
+
 
           <img class="img"
                data-src="holder.js/24x24/social"/>
@@ -38,11 +38,13 @@
              ng-show="link.subNav"></i>
         </a>
 
-        <div id="c{{$index}}"
+        <div id="search-{{$index}}"
              class="collapse"
+             collapsed="isCollapsed"
              ng-show="link.subNav"
-             ng-class="sub_nav_class"
-             style="padding:0;margin:0;">
+             style="position:relative;padding:0;margin:0;">
+
+          <div ng-include="'views/partials/alphabet-nav.html'"></div>
 
           <a ng-repeat="subNavItem in link.subNav"
              style="padding:0;margin:0;display:block;"
@@ -52,25 +54,21 @@
           </a>
         </div>
       </li>
-      <!--<li class="topcoat-list__item side-nav__list__item is-active">-->
-        <!--<a href="#" class="side-nav__button">Item</a>-->
-      <!--</li>-->
-      <!--<li class="topcoat-list__item side-nav__list__item">-->
-        <!--<a href="#" class="side-nav__button">Item</a>-->
-      <!--</li>-->
     </ul>
   </div>
-
 </div>
+
 <div class="search-results"
      ng-class="{'show-search-results' : isSearchResultsOpen}"
      display-search-results="isSearchResultsOpen">
-     <p>Search Results</p>
-     <ul ng-repeat="result in results.hits.hits">
-        <li>
-          <a href="#/exhibitor/{{result._id}}">
-            {{result.fields.EXHIBNAME}}
-          </a>
-        </li>
-     </ul>
+
+  <p>Search Results</p>
+
+  <ul ng-repeat="result in results.hits.hits">
+    <li>
+      <a href="#/exhibitor/{{result._id}}">
+        {{result.fields.EXHIBNAME}}
+      </a>
+    </li>
+  </ul>
 </div>

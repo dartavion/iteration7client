@@ -1,3 +1,4 @@
+'spec/exampleTest-spec.js',
 // A reference configuration file.
 exports.config = {
     // ----- How to setup Selenium -----

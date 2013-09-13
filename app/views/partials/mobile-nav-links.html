@@ -1,4 +1,5 @@
-<div ng-if="isNavDrawerOpen">
+<!--<div ng-if="isNavDrawerOpen">-->
+<div nav-panel="isNavPanelFaded" style="opacity:0;display:none;">
 
   <div class="topcoat-list__container side-nav__list__container">
 
@@ -9,11 +10,8 @@
           ng-repeat="link in navModel.list">
 
         <a class="side-nav__button"
-           data-toggle="collapse"
-           data-parent="#side-nav"
-           data-target="#c{{$index}}"
            ng-href="{{link.href ? '#/' + link.href : ''}}"
-           ng-click="!link.subNav ? toggleNav() : ''" >
+           ng-click="!link.subNav ? toggleNav() : toggleListItem('nav-'+$index, isCollapsed)" >
 
           <img class="img"
                data-src="holder.js/24x24/social"/>
@@ -23,10 +21,10 @@
              ng-show="link.subNav"></i>
         </a>
 
-        <div id="c{{$index}}"
+        <div id="nav-{{$index}}"
              class="collapse"
+             collapsed="isCollapsed"
              ng-show="link.subNav"
-             ng-class="sub_nav_class"
              style="padding:0;margin:0;">
 
           <a ng-click="toggleNav()"
