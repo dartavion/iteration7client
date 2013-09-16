@@ -66,7 +66,7 @@
 
   <ul ng-repeat="result in results.hits.hits">
     <li>
-      <a href="#/exhibitor/{{result._id}}">
+      <a ng-click="toggleSearch();hideSearch()" href="#/exhibitor/{{result._id}}">
         {{result.fields.EXHIBNAME}}
       </a>
     </li>
