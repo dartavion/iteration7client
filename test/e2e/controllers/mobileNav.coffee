@@ -1,16 +1,16 @@
-module.exports = (grunt) ->
-
-  protractor = require 'protractor'
-  webdriver = require 'selenium-webdriver'
-  util = require "util"
-  assert = require 'assert'
-  path = require 'path'
+#module.exports = (grunt) ->
+#
+#  protractor = require 'protractor'
+#  webdriver = require 'selenium-webdriver'
+#  util = require "util"
+#  assert = require 'assert'
+#  path = require 'path'
 
 
   describe 'Mobile Navigation', () ->
     beforeEach ->
       browser().navigateTo('/')
-
+      element('#slide-menu-button').click()
       it 'has 10 links', () ->
         expect(repeater('.side-nav ul li').count()).toBe(10)
 

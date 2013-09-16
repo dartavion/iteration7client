@@ -51,10 +51,10 @@ angular.module('AMCClientApp')
       setIsNavDrawerOpen: (value) ->
         isNavDrawerOpen = not value
 
-      getIsNavDrawerOpen: () ->
-        isNavDrawerOpen
+      getIsNavPanelFaded: () ->
+        isNavPanelFaded
 
-      setIsNavDrawerOpen: (value) ->
-        isNavDrawerOpen = not value
+      setIsNavPanelFaded: (value) ->
+        isNavPanelFaded = not value
 
     }
