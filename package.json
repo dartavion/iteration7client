@@ -15,7 +15,8 @@
     "grunt-cli": "~0.1.9",
     "bower": "~1.2.6",
     "yo": "~1.0.4",
-    "generator-protractor": "~0.1.4"
+    "generator-protractor": "~0.1.4",
+    "grunt-contrib-imagemin": "~0.3.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
