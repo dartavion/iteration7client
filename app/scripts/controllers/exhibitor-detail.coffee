@@ -1,10 +1,10 @@
 'use strict'
 
 angular.module('AMCClientApp')
-  .controller 'ExhibitorDetail', ($scope, $routeParams, ejsResource) ->
+  .controller 'ExhibitorDetail', ($scope, $routeParams, ejsResource, ES_HOST) ->
 
     if $routeParams.id
-      ejs = ejsResource('http://ec2-50-16-50-39.compute-1.amazonaws.com:9200')
+      ejs = ejsResource(ES_HOST)
 
       ejs.Request()
         .indices("amc") 

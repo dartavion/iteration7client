@@ -1,7 +1,7 @@
 'use strict'
 
 angular.module('AMCClientApp')
-  .controller 'SearchresultsCtrl', ['$scope', 'browseByModel', 'ejsResource', ( $scope, browseByModel, ejsResource) ->
+  .controller 'SearchresultsCtrl', ['$scope', 'browseByModel', 'ejsResource', 'ES_HOST', ( $scope, browseByModel, ejsResource, ES_HOST) ->
 
     $scope.browseByModel = browseByModel
 
@@ -16,7 +16,7 @@ angular.module('AMCClientApp')
     $scope.search = () ->
 
       if this.searchField.length > 3
-        ejs = ejsResource('http://ec2-50-16-50-39.compute-1.amazonaws.com:9200')
+        ejs = ejsResource(ES_HOST)
 
         $scope.results = ejs.Request()
             .indices("amc") 
