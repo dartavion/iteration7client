@@ -17,7 +17,7 @@
                data-src="holder.js/24x24/social"/>
 
           <span>{{link.title}}</span>
-          <i class="glyphicon glyphicon-chevron-down"
+          <i class="glyphicon glyphicon-chevron-down pull-right"
              ng-show="link.subNav"></i>
         </a>
 
@@ -26,14 +26,25 @@
              collapsed="isCollapsed"
              ng-show="link.subNav"
              style="padding:0;margin:0;">
+          <ul class="topcoat-list side-nav__list sub-nav"
+              style="width:250px">
+            <li class="topcoat-list__item side-nav__list__item"
+                ng-repeat="subNavItem in link.subNav">
+              <a  class="subnav-link"
+                  ng-click="toggleNav()"
+                  href="/#/{{subNavItem.href}}">
 
-          <a ng-click="toggleNav()"
+                <span>{{subNavItem.title}}</span>
+            </li>
+          </ul>
+
+          <!-- <a ng-click="toggleNav()"
              ng-repeat="subNavItem in link.subNav"
              style="padding:0;margin:0;display:block;"
              href="/#/{{subNavItem.href}}">
 
             <span>{{subNavItem.title}}</span>
-          </a>
+          </a> -->
         </div>
       </li>
       <!--<li class="topcoat-list__item side-nav__list__item is-active">-->
