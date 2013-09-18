@@ -1,9 +1,7 @@
 'use strict'
 
 angular.module('AMCClientApp')
-  .controller 'SearchresultsCtrl', ['$scope', 'browseByModel', 'ejsResource', 'ES_HOST', ( $scope, browseByModel, ejsResource, ES_HOST) ->
-
-    $scope.browseByModel = browseByModel
+  .controller 'SearchresultsCtrl', ['$scope', 'ejsResource', 'ES_HOST', ( $scope, ejsResource, ES_HOST) ->
 
     $scope.isSearchResultsOpen = false
 
@@ -32,81 +30,7 @@ angular.module('AMCClientApp')
             .doSearch();
   ]
 
-angular.module('AMCClientApp')
-  .service 'browseByModel', () ->
-      favorites =
-        title: 'My Favorites'
-        href: ''
-        subNav: []
 
-      category =
-        title: 'Category'
-        href: ''
-        subNav: []
-
-      events =
-        title: 'Events'
-        href: ''
-        subNav: []
-
-      exhibitor =
-        title: 'Exhibitor'
-        href: ''
-        subNav: []
-
-      productline =
-        title: 'Product Line'
-        href: ''
-        subNav: []
-
-      productline.subNav[0] =
-        title: 'Market Wednesday'
-        href: ''
-        subNav: []
-
-      guidebook =
-        title: 'Guide Book'
-        href: ''
-        subNav: []
-
-      services =
-        title: 'Services'
-        href: ''
-        subNav: []
-
-      for i in [0..10]
-        favorites.subNav[i] =
-          title: 'Lorem Ipsum'
-          href: 'http://www.google.com'
-        category.subNav[i] =
-          title: 'Lorem Ipsum'
-          href: 'http://www.google.com'
-        events.subNav[i] =
-          title: 'Lorem Ipsum'
-          href: 'http://www.google.com'
-        exhibitor.subNav[i] =
-          title: 'Lorem Ipsum'
-          href: 'http://www.google.com'
-        productline.subNav[i] =
-          title: 'Lorem Ipsum'
-          href: 'http://www.google.com'
-        guidebook.subNav[i] =
-          title: 'Lorem Ipsum'
-          href: 'http://www.google.com'
-        services.subNav[i] =
-          title: 'Lorem Ipsum'
-          href: 'http://www.google.com'
-
-      @list = [
-        favorites
-        category
-        events
-        exhibitor
-        productline
-        guidebook
-        services
-      ]
-      return
 
 
 
