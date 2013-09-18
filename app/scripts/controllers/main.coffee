@@ -1,27 +1,33 @@
 'use strict'
 
 angular.module('AMCClientApp')
-  .controller 'MainCtrl', ['$scope', '$rootScope', 'appModel', ($scope, $rootScope, appModel) ->
+  .controller 'MainAppCtrl', ['$scope', 'appModel', ($scope, appModel) ->
 
     $scope.navModel = appModel.getNav()
+    $scope.browseByModel = appModel.getBrowseBy()
+    $scope.isCollapsed = appModel.getIsCollapsed()
 
-    $rootScope.isNavPanelFaded = false
+    $scope.toggleNav = () ->
+      $scope.isNavPanelFaded = appModel.setIsNavPanelFaded(appModel.getIsNavPanelFaded())
+      $scope.isNavDrawerOpen = appModel.setIsNavDrawerOpen(appModel.getIsNavDrawerOpen())
 
-    $rootScope.navIsSelected = (navItem) ->
-      navItem is appModel.selectedItem
+    $scope.selectNavItem = (item) ->
 
-    $rootScope.toggleNav = () ->
-      $rootScope.isNavPanelFaded = not $rootScope.isNavPanelFaded
 
-      appModel.setIsNavDrawerOpen($rootScope.isNavDrawerOpen)
-      $rootScope.isNavDrawerOpen = appModel.getIsNavDrawerOpen()
+    $scope.toggleSearch = () ->
+      $scope.isSearchDrawerOpen = appModel.setIsSearchDrawerOpen(appModel.getIsSearchDrawerOpen())
+      $scope.isSearchPanelFaded = appModel.setIsSearchPanelFaded(appModel.getIsSearchPanelFaded())
 
-    $rootScope.bodyTouchListener = () ->
-      if $rootScope.isNavDrawerOpen
-        $scope.toggleNav()
+    $scope.closeSearch = () ->
+      $scope.isSearchPanelFaded = true
+      $scope.isSearchDrawerOpen = true
 
     $scope.toggleListItem = (id, isCollapsed) ->
-#      $rootScope.isCollapsed = not $rootScope.isCollapsed
-      $rootScope.$broadcast('collapseChange', { 'id': id, 'isCollapsed': isCollapsed})
+      $scope.isCollapsed = appModel.setIsCollapsed(appModel.getIsCollapsed())
+
+    $scope.bodyTouchedListener = () ->
+      if appModel.getIsNavDrawerOpen()
+        $scope.toggleNav()
+
 
 ]

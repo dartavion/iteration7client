@@ -7,6 +7,27 @@ angular.module('AMCClientApp')
 
     isNavPanelFaded = false
 
+    isSearchDrawerOpen = false
+
+    isSearchPanelFaded = false
+
+    isCollapsed = false
+
+    browseBy = [
+      {title: 'My Favorites', href: '', subNav: []},
+      {title: 'Category', href: '', subNav: []},
+      {title: 'Events', href: '', subNav: []},
+      {title: 'Exhibitor', href: '', subNav: []},
+      {title: 'Product Line', href: '', subNav: []}
+    ]
+
+    for item in browseBy
+      for i in [0..10]
+        item.subNav[i] =
+          title: 'Lorem Ipsum'
+          href: 'http://www.google.com'
+
+
     nav = [
       {title:'Home', href:'home'},
       {title:'Markets', href:'markets'},
@@ -44,8 +65,12 @@ angular.module('AMCClientApp')
 
 
     {
+
       getNav: () ->
         nav
+
+      getBrowseBy: () ->
+        browseBy
 
       getIsNavDrawerOpen: () ->
         isNavDrawerOpen
@@ -59,4 +84,21 @@ angular.module('AMCClientApp')
       setIsNavPanelFaded: (value) ->
         isNavPanelFaded = not value
 
+      getIsSearchDrawerOpen: () ->
+        isSearchDrawerOpen
+
+      setIsSearchDrawerOpen: (value) ->
+        isSearchDrawerOpen = not value
+
+      getIsSearchPanelFaded: () ->
+        isSearchPanelFaded
+
+      setIsSearchPanelFaded: (value) ->
+        isSearchPanelFaded = not value
+
+      getIsCollapsed: () ->
+        isCollapsed
+
+      setIsCollapsed: (value) ->
+        isCollapsed = not value
     }

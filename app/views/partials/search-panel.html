@@ -17,29 +17,24 @@
             ng-click="toggleSearch();hideSearch()">Cancel</button>
   </div>
 
-  <div style="padding-top:57px;" class="topcoat-list__container side-nav__list__container">
+  <div class="topcoat-list__container side-nav__list__container">
 
     <ul class="topcoat-list side-nav__list">
 
       <li class="topcoat-list__item side-nav__list__item"
-          ng-repeat="link in browseByModel.list">
+          ng-repeat="link in browseByModel">
 
         <a class="side-nav__button"
            ng-click="toggleListItem('search-'+$index, isCollapsed)"
            ng-href="{{link.href ? '#/' + link.href : ''}}">
-
-
           <img class="img"
                data-src="holder.js/24x24/social"/>
-
           <span>{{link.title}}</span>
-
           <i class="glyphicon glyphicon-chevron-down pull-right"
              ng-show="link.subNav"></i>
         </a>
 
         <div id="search-{{$index}}"
-             class="collapse"
              collapsed="isCollapsed"
              ng-show="link.subNav"
              style="position:relative;padding:0;margin:0;">
@@ -62,12 +57,16 @@
      ng-class="{'show-search-results' : isSearchResultsOpen}"
      display-search-results="isSearchResultsOpen">
 
-  <p>Search Results</p>
+  <div ng-controller="SearchbuttonbarCtrl"
+       ng-include="'views/partials/search-context-buttons.html'"></div>
 
-  <ul ng-repeat="result in results.hits.hits">
-    <li>
+  <ul class="result">
+    <li ng-repeat="result in results.hits.hits">
       <a ng-click="toggleSearch();hideSearch()" href="#/exhibitor/{{result._id}}">
-        {{result.fields.EXHIBNAME}}
+        <span>
+          {{result.fields.EXHIBNAME}}
+        </span>
+        <i class="glyphicon glyphicon-plus-sign pull-right"></i>
       </a>
     </li>
   </ul>

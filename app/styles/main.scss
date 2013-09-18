@@ -11,13 +11,16 @@
 @import "../bower_components/sass-bootstrap/lib/pagination";
 @import "../bower_components/sass-bootstrap/lib/carousel";
 @import "../bower_components/sass-bootstrap/lib/badges";
-@import "../bower_components/topcoat/css/topcoat-mobile-light.css";
+
 
 // BASE
+@import "base/topcoat";
 @import "base/base";
 @import "base/fonts";
+@import "base/colors";
 
 // COMPONENTS
 @import "components/mobile_nav";
+@import "components/header";
 @import "components/exhibitor_detail";
 @import "components/exhibitors_list";
