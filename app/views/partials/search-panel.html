@@ -1,15 +1,18 @@
 <div search-panel="isSearchPanelFaded" style="opacity:0">
 
   <div class="search-header" style="position:relative">
+
     <input class="topcoat-text-input"
            type="text"
+           clear-me-listener
            placeholder="Search"
            ng-click="displaySearch()"
            ng-keyup="search()"
            ng-model="searchField">
-    <button class="topcoat-icon-button--quiet">
-      <span class="topcoat-icon" style="background-color:#A5A7A7;"></span>
-    </button>
+
+    <span class="topcoat-icon-button--quiet topcoat-icon--delete"
+          ng-click="clearSearchField()"></span>
+
 
     {{seachField}}
 
@@ -63,11 +66,16 @@
   <ul class="result">
     <li ng-repeat="result in results.hits.hits">
       <a ng-click="toggleSearch();hideSearch()" href="#/exhibitor/{{result._id}}">
-        <span>
+        <p>
           {{result.fields.EXHIBNAME}}
-        </span>
-        <i class="glyphicon glyphicon-plus-sign pull-right"></i>
+        </p>
+        <p>
+          {{result._type}}
+        </p>
       </a>
+      <span class="topcoat-icon-button--large topcoat-icon--plus"
+            ng-click="addMeToFavorites()">
+      </span>
     </li>
   </ul>
 </div>

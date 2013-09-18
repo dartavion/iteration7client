@@ -1,3 +1,4 @@
+@import "../base/colors";
 /**
 *
 * Copyright 2012 Adobe Systems Inc.;
@@ -737,7 +738,7 @@
 .topcoat-button--cta,
 .topcoat-button--large--cta {
   border: 1px solid #143250;
-  background-color: #288edf;
+  icon: #288edf;
   box-shadow: inset 0 1px rgba(255,255,255,0.36);
   color: #fff;
   font-weight: 500;
@@ -2729,7 +2730,7 @@ body {
 }
 
 .topcoat-icon--menu-stack {
-  background: url("../img/hamburger_dark.svg") no-repeat;
+  background: url("../images/hamburger_dark.svg") no-repeat;
   background-size: cover;
 }
 
@@ -2998,4 +2999,18 @@ ul.sub-nav li a.subnav-link {
 }
 .side-nav__button:active {
   background-color:#e5e9e8;
+}
+
+.topcoat-icon--plus {
+  color: $amc-blue;
+  background: url("../images/plus.svg") no-repeat;
+  background-size: cover;
+}
+
+.topcoat-icon--delete {
+  color: $amc-blue;
+  background: url("../images/cancel.svg") no-repeat;
+  background-size: cover;
+  width: 24px;
+  height: 24px;
 }

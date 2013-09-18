@@ -58,6 +58,10 @@
       height:62px;
       border-bottom: 1px solid $light-gray;
       width:100%;
+      p{
+        margin:0;
+        padding:0;
+      }
       a{
         display:table-cell;
         width:100%;

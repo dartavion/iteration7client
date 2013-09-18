@@ -2,8 +2,8 @@
 
 angular.module('AMCClientApp')
   .controller 'SearchresultsCtrl', [
-    '$scope', 'ejsResource', 'ES_HOST', 'AT_HOST', '$http' 
-    ( $scope, ejsResource, ES_HOST, AT_HOST, $http) ->
+    '$scope', 'ejsResource', 'ES_HOST', 'AT_HOST', '$http'
+    ( $scope, ejsResource, ES_HOST, AT_HOST, $http, localStorageService) ->
 
       $scope.isSearchResultsOpen = false
 
@@ -12,6 +12,16 @@ angular.module('AMCClientApp')
 
       $scope.hideSearch = () ->
         $scope.isSearchResultsOpen = false
+
+      $scope.addMeToFavorites = () ->
+        alert("Add Favorite Feature!!!")
+
+
+      $scope.$on 'clear-me-listener', () ->
+
+
+      $scope.clearSearchField = () ->
+        $scope.$emit.clearMeListener()
 
       $scope.search = () ->
 
