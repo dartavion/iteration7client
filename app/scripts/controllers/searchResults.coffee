@@ -1,24 +1,26 @@
 'use strict'
 
 angular.module('AMCClientApp')
-  .controller 'SearchresultsCtrl', ['$scope', 'browseByModel', 'ejsResource', 'ES_HOST', ( $scope, browseByModel, ejsResource, ES_HOST) ->
+  .controller 'SearchresultsCtrl', [
+    '$scope', 'browseByModel', 'ejsResource', 'ES_HOST', 'AT_HOST', '$http' 
+    ( $scope, browseByModel, ejsResource, ES_HOST, AT_HOST, $http) ->
 
-    $scope.browseByModel = browseByModel
+      $scope.browseByModel = browseByModel
 
-    $scope.isSearchResultsOpen = false
-
-    $scope.displaySearch = () ->
-      $scope.isSearchResultsOpen = true
-
-    $scope.hideSearch = () ->
       $scope.isSearchResultsOpen = false
 
-    $scope.search = () ->
+      $scope.displaySearch = () ->
+        $scope.isSearchResultsOpen = true
 
-      if this.searchField.length > 3
-        ejs = ejsResource(ES_HOST)
+      $scope.hideSearch = () ->
+        $scope.isSearchResultsOpen = false
 
-        $scope.results = ejs.Request()
+      $scope.search = () ->
+
+        if this.searchField.length >= 3
+          ejs = ejsResource(ES_HOST)
+
+          $scope.results = ejs.Request()
             .indices("amc") 
             .types("exhibitor")
             .fields([
@@ -30,6 +32,12 @@ angular.module('AMCClientApp')
               ejs.QueryStringQuery().defaultField('_all').query(this.searchField)
             )
             .doSearch();
+
+          $http.get AT_HOST + "/track_activity", 
+            params: 
+              act_type: 'search'
+              'params[search_term]': this.searchField
+              'params[user_id]': 1
   ]
 
 angular.module('AMCClientApp')
