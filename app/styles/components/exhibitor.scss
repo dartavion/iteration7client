@@ -1,0 +1,77 @@
+body.exhibitor {
+
+	background-color: white;
+	padding: 0 !important;
+
+	// .body-touch-listener {
+	// 	padding: 0 !important;
+	// }
+
+	.main-content {
+		padding-top: 2.8em;
+
+		.main-view {
+			position: static !important;
+			padding: 0 !important;
+		}
+	}
+
+	div.company-photos-container{
+	  overflow-x: auto;
+	  -webkit-overflow-scrolling: touch;
+
+	  ul.thumbnail-list {
+	  	margin: 0 auto 14px;
+	    list-style: none;
+	    width: 610px;
+	    clear: both;
+	    overflow: hidden;
+	    padding-left: 0;
+
+	    > li {
+	      position: relative;
+	      width: 200px;
+	      height: 200px;
+	      outline: 1px #ddd solid;
+	      float: left;
+	      margin-right: 5px;
+	      background-color: #e8e9e9;
+	    }
+
+	    li:last-child {
+	      margin-right: 0;
+	    }
+	  }
+	}
+
+	div.logo-short-info {
+		padding: 10px;
+
+		img {
+			display: block;
+			margin: 0 auto;
+			width: 175px;
+		}
+
+		p {
+			font-size: 14px;
+			color: #919296;
+			line-height: 18px;
+		}
+	}
+
+	.action-menu-list {
+		ul {
+			
+
+			li {
+				p.list-group-item-text {
+					color: #919296;
+				}
+			}
+		}
+	}
+
+}
+
+
