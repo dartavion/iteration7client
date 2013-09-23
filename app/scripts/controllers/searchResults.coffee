@@ -17,11 +17,11 @@ angular.module('AMCClientApp')
         alert("Add Favorite Feature!!!")
 
 
-      $scope.$on 'clear-me-listener', () ->
-
+      $scope.$on 'clearMeListener', (clearme) ->
+        console.log 'working'
 
       $scope.clearSearchField = () ->
-        $scope.$emit.clearMeListener()
+        @searchField = ''
 
       $scope.search = () ->
 

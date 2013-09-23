@@ -2891,7 +2891,12 @@ body {
 .topcoat-button--large--cta,
 .topcoat-button-bar__button,
 .topcoat-button-bar__button--large {
-  background-color: #e5e9e8;
+  background-color: $amc-blue;
+  color: $white;
+  text-shadow: none;
+  box-shadow: none;
+  border: none;
+  border-radius: 2px;
 }
 
 .topcoat-button:hover,
@@ -2900,7 +2905,8 @@ body {
 .topcoat-button--large--quiet:hover,
 .topcoat-button-bar__button:hover,
 .topcoat-button-bar__button--large:hover {
-  background-color: #edf1f1;
+  background-color: $light-gray;
+  color: $amc-blue;
 }
 
 .topcoat-button:active,
