@@ -36,6 +36,10 @@ body.exhibitor {
 	      float: left;
 	      margin-right: 5px;
 	      background-color: #e8e9e9;
+
+	      img {
+	      	width: 200px;
+	      }
 	    }
 
 	    li:last-child {
@@ -61,14 +65,50 @@ body.exhibitor {
 	}
 
 	.action-menu-list {
+		padding: 0 10px;
+
 		ul {
 			
+			li.heading {
+				position: relative;
 
-			li {
-				p.list-group-item-text {
-					color: #919296;
+				img.plus-icon {
+					position: absolute;
+					top: 10px;
+					right: 10px;
+					width: 40px;
 				}
 			}
+
+			li {
+				background-color: #fafafa;
+				color: #999999;
+
+				img.notes-icon, img.calendar-icon {
+					width: 20px;
+				}
+
+				h4 {
+					color: #7F7F7F;
+					display: inline-block;
+					img.triangle-icon {
+						width: 43px;
+						height: 38px;
+						display: inline-block;
+					}
+				}
+
+				p.list-group-item-text {
+					color: #919296;
+					display: inline-block;
+				}
+			}
+
+			li:first-child {
+				background-color: white;
+			}
+
+
 		}
 	}
 
