@@ -13,7 +13,6 @@ angular.module('AMCClientApp')
 
     $scope.selectNavItem = (item) ->
 
-
     $scope.toggleSearch = () ->
       $scope.isSearchDrawerOpen = appModel.setIsSearchDrawerOpen(appModel.getIsSearchDrawerOpen())
       $scope.isSearchPanelFaded = appModel.setIsSearchPanelFaded(appModel.getIsSearchPanelFaded())
@@ -29,5 +28,13 @@ angular.module('AMCClientApp')
       if appModel.getIsNavDrawerOpen()
         $scope.toggleNav()
 
+    $scope.bodySwipeLeftListener = () ->
+      if appModel.getIsNavDrawerOpen()
+        $scope.toggleNav()
+      else
+        $scope.toggleSearch()
+
+    $scope.bodySwipeRightListener = () ->
+      $scope.toggleNav()
 
 ]
