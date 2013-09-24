@@ -13,6 +13,8 @@ angular.module('AMCClientApp')
 
     isCollapsed = false
 
+    isSearchResultsOpen = false
+
     browseBy = [
       {title: 'My Favorites', href: '', subNav: []},
       {title: 'Category', href: '', subNav: []},
@@ -95,6 +97,12 @@ angular.module('AMCClientApp')
 
       setIsSearchPanelFaded: (value) ->
         isSearchPanelFaded = not value
+
+      getIsSearchResultsOpen: () ->
+        isSearchResultsOpen
+
+      setIsSearchResultsOpen: (value) ->
+        isSearchResultsOpen = not value
 
       getIsCollapsed: () ->
         isCollapsed

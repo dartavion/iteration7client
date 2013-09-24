@@ -2891,12 +2891,12 @@ body {
 .topcoat-button--large--cta,
 .topcoat-button-bar__button,
 .topcoat-button-bar__button--large {
-  background-color: $amc-blue;
-  color: $white;
+  background-color: $light-gray;
+  color: $amc-blue;
   text-shadow: none;
   box-shadow: none;
   border: none;
-  border-radius: 2px;
+  border-radius: 0px;
 }
 
 .topcoat-button:hover,
@@ -2905,16 +2905,17 @@ body {
 .topcoat-button--large--quiet:hover,
 .topcoat-button-bar__button:hover,
 .topcoat-button-bar__button--large:hover {
-  background-color: $light-gray;
+  background-color: $white;
   color: $amc-blue;
 }
 
 .topcoat-button:active,
 .topcoat-button--large:active,
 .topcoat-button-bar__button:active,
+.topcoat-button-bar__button--large.active,
 .topcoat-button-bar__button--large:active,
 :checked + .topcoat-button-bar__button {
-  background-color: #d3d7d7;
+  background-color: $white;
 }
 
 .topcoat-button--quiet:active,
@@ -2940,9 +2941,6 @@ body {
 .topcoat-button--large--cta:active {
   background-color: #0380e8;
 }
-
-
-
 
 
 .topcoat-navigation-bar {
@@ -3019,4 +3017,13 @@ ul.sub-nav li a.subnav-link {
   background-size: cover;
   width: 24px;
   height: 24px;
+}
+.topcoat-text-input{
+  border-radius: 0;
+  border:1px solid $amc-blue;
+  background-color: $white;
+  &:focus{
+    border:1px solid $amc-blue;
+    background-color: $white;
+  }
 }

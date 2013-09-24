@@ -2,23 +2,26 @@
 
   <div class="search-header" style="position:relative">
 
-    <input class="topcoat-text-input"
-           type="text"
+    <label class="search-component">
+      <input class="topcoat-text-input full"
+             type="text"
+             placeholder="Search"
+             ng-click="displaySearch()"
+             ng-keyup="search()"
+             ng-model="searchField">
 
-           placeholder="Search"
-           ng-click="displaySearch()"
-           ng-keyup="search()"
-           ng-model="searchField">
-
-    <span class="topcoat-icon-button topcoat-icon--delete"
-          ng-click="clearSearchField()"></span>
-
-
-    {{seachField}}
+      <span class="clear-search"
+            ng-click="clearSearchField()"></span>
+    </label>
 
     <button class="topcoat-button"
             ng-click="toggleSearch();hideSearch()">Cancel</button>
+
   </div>
+
+  <div class="search-context-buttons"
+       ng-controller="SearchbuttonbarCtrl"
+       ng-include="'views/partials/search-context-buttons.html'"></div>
 
   <div class="topcoat-list__container side-nav__list__container">
 
@@ -60,22 +63,47 @@
      ng-class="{'show-search-results' : isSearchResultsOpen}"
      display-search-results="isSearchResultsOpen">
 
-  <div ng-controller="SearchbuttonbarCtrl"
-       ng-include="'views/partials/search-context-buttons.html'"></div>
-
-  <ul class="result">
-    <li ng-repeat="result in results.hits.hits">
-      <a ng-click="toggleSearch();hideSearch()" href="#/exhibitor/{{result._id}}">
-        <p>
+  <section ng-repeat="result in results.hits.hits">
+    <div class="amc-result">
+      <h2>
+        <a ng-click="toggleSearch();hideSearch()" href="#/exhibitor/{{result._id}}">
           {{result.fields.EXHIBNAME}}
-        </p>
-        <p>
-          {{result._type}}
-        </p>
-      </a>
+        </a>
+        <i>icon</i>
+        <span>Floor</span>
+        <span>&dash;</span>
+        <span>Room</span>
+      </h2>
+
       <span class="topcoat-icon-button--large topcoat-icon--plus"
             ng-click="addMeToFavorites()">
       </span>
-    </li>
-  </ul>
+    </div>
+    <div class="search-result-detail">
+      <img src="images/exhibitor/gallery-1.png"/>
+    </div>
+  </section>
+
+  <!--<ul class="result">-->
+    <!--<li ng-repeat="result in results.hits.hits">-->
+      <!--<a ng-click="toggleSearch();hideSearch()" href="#/exhibitor/{{result._id}}">-->
+        <!--<p>-->
+          <!--{{result.fields.EXHIBNAME}}-->
+        <!--</p>-->
+        <!--<p>-->
+          <!--<i>icon</i>-->
+          <!--<span>Floor</span>-->
+          <!--<span>&dash;</span>-->
+          <!--<span>Room</span>-->
+        <!--</p>-->
+
+      <!--</a>-->
+      <!--<span class="topcoat-icon-button--large topcoat-icon--plus"-->
+            <!--ng-click="addMeToFavorites()">-->
+      <!--</span>-->
+      <!--<div class="search-result-detail">-->
+        <!--<img src="images/exhibitor/gallery-1.png"/>-->
+      <!--</div>-->
+    <!--</li>-->
+  <!--</ul>-->
 </div>

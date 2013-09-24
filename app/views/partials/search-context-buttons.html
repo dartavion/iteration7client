@@ -1,76 +1,17 @@
-<div style="padding:15px 5px 10px 5px;background-color: gray;text-align:center;">
+<div >
   <div class="topcoat-button-bar full" >
     <div class="topcoat-button-bar__item">
-      <button data-toggle="modal"
-              data-target="#myModal"
-              class="topcoat-button-bar__button full"
-              ng-click="setFloorSearchContext()">List</button>
+      <button class="topcoat-button-bar__button--large full active"
+              ng-click="setFloorSearchContext()">LIST</button>
     </div>
     <div class="topcoat-button-bar__item">
-      <button data-toggle="modal"
-              data-target="#myModal1"
-              class="topcoat-button-bar__button full"
-              ng-click="setAgendaSearchContext()">Map</button>
+      <button class="topcoat-button-bar__button--large full"
+              ng-click="setAgendaSearchContext()">MAP</button>
     </div>
     <div class="topcoat-button-bar__item">
-      <button data-toggle="modal"
-              data-target="#myModal2"
-              class="topcoat-button-bar__button full"
-              ng-click="setFavoritesSearchContext()">Floors</button>
+      <button class="topcoat-button-bar__button--large full"
+              ng-click="setFavoritesSearchContext()">FLOORS</button>
     </div>
   </div>
 </div>
 
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        Floor Context
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
-<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        Agenda Context
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
-<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        Favorites Modal Context
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->

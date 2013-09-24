@@ -16,10 +16,6 @@ angular.module('AMCClientApp')
       $scope.addMeToFavorites = () ->
         alert("Add Favorite Feature!!!")
 
-
-      $scope.$on 'clearMeListener', (clearme) ->
-        console.log 'working'
-
       $scope.clearSearchField = () ->
         @searchField = ''
 
@@ -29,7 +25,7 @@ angular.module('AMCClientApp')
           ejs = ejsResource(ES_HOST)
 
           $scope.results = ejs.Request()
-            .indices("amc") 
+            .indices("amc")
             .types("exhibitor")
             .fields([
               'EXHIBNAME',
@@ -41,8 +37,8 @@ angular.module('AMCClientApp')
             )
             .doSearch();
 
-          $http.get AT_HOST + "/track_activity", 
-            params: 
+          $http.get AT_HOST + "/track_activity",
+            params:
               act_type: 'search'
               'params[search_term]': this.searchField
               'params[user_id]': 1
