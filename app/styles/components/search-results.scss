@@ -1,0 +1,31 @@
+@import '../base/colors';
+
+.amc-search-results {
+
+  .amc-search-results__result {
+    display: inline-table;
+    width: 100%;
+    background-color: $white;
+    h2, > span {
+      display: table-cell;
+      a {
+        display: block;
+      }
+    }
+    h2 {
+      font-size: 1em;
+      padding: 10px;
+    }
+  }
+
+  .amc-search-results__result-detail {
+    padding: 5px;
+    background-color: $light-gray;
+    width: 100%;
+    display: block;
+    img {
+      width: 100%;
+    }
+  }
+}
+

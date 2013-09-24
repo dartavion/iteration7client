@@ -1,8 +1,8 @@
 <div search-panel="isSearchPanelFaded" style="opacity:0">
 
-  <div class="search-header" style="position:relative">
+  <div class="search-bar" style="position:relative">
 
-    <label class="search-component">
+    <label class="search-bar__search-input">
       <input class="topcoat-text-input full"
              type="text"
              placeholder="Search"
@@ -10,7 +10,7 @@
              ng-keyup="search()"
              ng-model="searchField">
 
-      <span class="clear-search"
+      <span class="search-bar__clear-search-button"
             ng-click="clearSearchField()"></span>
     </label>
 
@@ -19,7 +19,7 @@
 
   </div>
 
-  <div class="search-context-buttons"
+  <div class="amc-search-context-buttons"
        ng-controller="SearchbuttonbarCtrl"
        ng-include="'views/partials/search-context-buttons.html'"></div>
 
@@ -59,12 +59,12 @@
   </div>
 </div>
 
-<div class="search-results"
+<div class="amc-search-results"
      ng-class="{'show-search-results' : isSearchResultsOpen}"
      display-search-results="isSearchResultsOpen">
 
   <section ng-repeat="result in results.hits.hits">
-    <div class="amc-result">
+    <div class="amc-search-results__result">
       <h2>
         <a ng-click="toggleSearch();hideSearch()" href="#/exhibitor/{{result._id}}">
           {{result.fields.EXHIBNAME}}
@@ -79,7 +79,7 @@
             ng-click="addMeToFavorites()">
       </span>
     </div>
-    <div class="search-result-detail">
+    <div class="amc-search-results__result-detail">
       <img src="images/exhibitor/gallery-1.png"/>
     </div>
   </section>

@@ -1,0 +1,29 @@
+@import '../base/colors';
+
+.search-bar{
+  display:inline-table;
+  width: 100%;
+  background-color: $white;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  text-align: center;
+  .search-bar__search-input {
+    position: relative;
+    width:100%;
+    padding-right:5px;
+    display:table-cell;
+    .search-bar__clear-search-button {
+      position: absolute;
+      background-color: white;
+      border: lightblue;
+      width: 25px;
+      height: 25px;
+      top: 4px;
+      right: 7px;
+      content:'laptop';
+    }
+  }
+}
