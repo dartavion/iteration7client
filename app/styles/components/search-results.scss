@@ -68,8 +68,14 @@
         }
       }
     }
+    .amc-search-results__image{
+      border: $card-border;
+      border-radius: $card-border-radius;
+    }
     .amc-search-results__result-detail--data {
       padding-left: 20px;
+      border: $card-border;
+      border-radius: $card-border-radius;
       h2 {
         color: $dark-gray;
         font-weight: normal;

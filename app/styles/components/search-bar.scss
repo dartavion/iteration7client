@@ -24,7 +24,12 @@
       height: 25px;
       top: 4px;
       right: 7px;
-      content: 'laptop';
+      line-height: 1.313rem;
+      font-size: 12px;
+      background-image: url("/images/cancel.svg");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 12px;
     }
   }
 }
