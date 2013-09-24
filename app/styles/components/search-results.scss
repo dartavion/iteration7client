@@ -1,19 +1,31 @@
 @import '../base/colors';
 
 .amc-search-results {
-
   .amc-search-results__result {
     display: inline-table;
     width: 100%;
+    overflow-x: auto;
+    height: 100%;
     background-color: $white;
     h2, > span {
       display: table-cell;
       a {
         display: block;
+        color: $dark-gray;
+        font-weight: normal;
+        &:link, &:hover, &:active, &:visited {
+          color: $dark-gray;
+          text-decoration: none;
+        }
+      }
+      span {
+        font-weight: normal;
+        font-size: .8em;
+        color: $dark-gray;
       }
     }
     h2 {
-      font-size: 1em;
+      font-size: 1.2em;
       padding: 10px;
     }
   }
@@ -21,11 +33,73 @@
   .amc-search-results__result-detail {
     padding: 5px;
     background-color: $light-gray;
-    width: 100%;
-    display: block;
+    position: relative;
+    overflow: hidden;
+    overflow-x: scroll;
+    .amc-search-results-container {
+      width: 700px;
+      background-color: $light-gray;
+      > div {
+        float: left;
+        width: 260px;
+        position: relative;
+        margin: 5px;
+      }
+    }
     img {
       width: 100%;
+
+    }
+    div {
+      background-color: $white;
+      padding: 5px;
+      min-height: 260px;
+      max-height: 300px;
+      ul {
+        color: $amc-blue;
+        list-style: square;
+        margin-left: 0;
+        padding-left: 20px;
+        li {
+          span {
+            color: $dark-gray;
+          }
+
+        }
+      }
+    }
+    .amc-search-results__result-detail--data {
+      padding-left: 20px;
+      h2 {
+        color: $dark-gray;
+        font-weight: normal;
+        font-size: 1em;
+        padding: 0;
+      }
     }
   }
+}
+
+.search-panel {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.show-search-results {
+  background-color: $white;
+  opacity: 0;
+  position: absolute;
+  z-index: 1;
+  top: 95px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  min-height: 100%;
+  height: 100%;
 }
 

@@ -1,10 +1,11 @@
 @import '../base/colors';
 
-.search-bar{
-  display:inline-table;
+.search-bar {
+  display: inline-table;
   width: 100%;
   background-color: $white;
   z-index: 2;
+  height: 70px;
   position: fixed;
   top: 0;
   left: 0;
@@ -12,9 +13,9 @@
   text-align: center;
   .search-bar__search-input {
     position: relative;
-    width:100%;
-    padding-right:5px;
-    display:table-cell;
+    width: 100%;
+    padding-right: 5px;
+    display: table-cell;
     .search-bar__clear-search-button {
       position: absolute;
       background-color: white;
@@ -23,7 +24,7 @@
       height: 25px;
       top: 4px;
       right: 7px;
-      content:'laptop';
+      content: 'laptop';
     }
   }
 }

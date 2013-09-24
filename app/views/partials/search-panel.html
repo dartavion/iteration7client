@@ -1,6 +1,6 @@
-<div search-panel="isSearchPanelFaded" style="opacity:0">
+<div search-panel="isSearchPanelFaded" style="opacity:0;padding-top:92px;">
 
-  <div class="search-bar" style="position:relative">
+  <div class="search-bar">
 
     <label class="search-bar__search-input">
       <input class="topcoat-text-input full"
@@ -64,7 +64,7 @@
      display-search-results="isSearchResultsOpen">
 
   <section ng-repeat="result in results.hits.hits">
-    <div class="amc-search-results__result">
+    <div class="amc-search-results__result" >
       <h2>
         <a ng-click="toggleSearch();hideSearch()" href="#/exhibitor/{{result._id}}">
           {{result.fields.EXHIBNAME}}
@@ -80,7 +80,20 @@
       </span>
     </div>
     <div class="amc-search-results__result-detail">
-      <img src="images/exhibitor/gallery-1.png"/>
+      <div class="amc-search-results-container">
+        <div>
+          <img src="images/exhibitor/gallery-1.png"/>
+        </div>
+        <div class="amc-search-results__result-detail--data">
+          <h2>Lorem ipsum moo doo dee doo dah la-de-da-dee-dooo!</h2>
+          <ul>
+            <li><span>Item One</span></li>
+            <li><span>Item Two</span></li>
+            <li><span>Item Three</span></li>
+            <li><span>Item Four</span></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
