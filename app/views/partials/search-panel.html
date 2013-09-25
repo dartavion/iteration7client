@@ -11,7 +11,9 @@
              ng-model="searchField">
 
       <span class="search-bar__clear-search-button"
-            ng-click="clearSearchField()"></span>
+            ng-click="clearSearchField()">
+        <i class="icon-x"></i>
+      </span>
     </label>
 
     <button class="topcoat-button"
@@ -63,21 +65,21 @@
      ng-class="{'show-search-results' : isSearchResultsOpen}"
      display-search-results="isSearchResultsOpen">
 
-  <section ng-repeat="result in results.hits.hits">
+  <section ng-class="{active: isList}" ng-repeat="result in results.hits.hits">
     <div class="amc-search-results__result" >
-      <h2>
+      <h2 style="width:100%">
         <a ng-click="toggleSearch();hideSearch()" href="#/exhibitor/{{result._id}}">
           {{result.fields.EXHIBNAME}}
         </a>
-        <i>icon</i>
-        <span>Floor</span>
+        <span style="font-weight: bold">B1</span>
+        <i class="icon-building2"></i>
+        <span>22</span>
         <span>&dash;</span>
-        <span>Room</span>
+        <span>8231</span>
       </h2>
 
-      <span class="topcoat-icon-button--large topcoat-icon--plus"
-            ng-click="addMeToFavorites()">
-        ico
+      <span style="vertical-align: middle;padding-right:5px;" ng-click="addMeToFavorites()">
+        <i class="icon-plus"></i>
       </span>
     </div>
     <div class="amc-search-results__result-detail">
@@ -98,26 +100,11 @@
     </div>
   </section>
 
-  <!--<ul class="result">-->
-    <!--<li ng-repeat="result in results.hits.hits">-->
-      <!--<a ng-click="toggleSearch();hideSearch()" href="#/exhibitor/{{result._id}}">-->
-        <!--<p>-->
-          <!--{{result.fields.EXHIBNAME}}-->
-        <!--</p>-->
-        <!--<p>-->
-          <!--<i>icon</i>-->
-          <!--<span>Floor</span>-->
-          <!--<span>&dash;</span>-->
-          <!--<span>Room</span>-->
-        <!--</p>-->
+  <section ng-class="{active: isMap}">
+    Map Section
+  </section>
+  <section ng-class="{active: isFloor}">
+    Map Section
+  </section>
 
-      <!--</a>-->
-      <!--<span class="topcoat-icon-button--large topcoat-icon--plus"-->
-            <!--ng-click="addMeToFavorites()">-->
-      <!--</span>-->
-      <!--<div class="search-result-detail">-->
-        <!--<img src="images/exhibitor/gallery-1.png"/>-->
-      <!--</div>-->
-    <!--</li>-->
-  <!--</ul>-->
 </div>

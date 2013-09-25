@@ -1,10 +1,11 @@
 'use strict'
 
 angular.module('AMCClientApp')
-  .controller 'SearchbuttonbarCtrl', ($scope, $rootScope) ->
+  .controller 'SearchbuttonbarCtrl', ($scope, $element) ->
 
-    $scope.setFloorSearchContext = (modal) ->
-
-    $scope.setAgendaSearchContext = (modal) ->
-
-    $scope.setFavoritesSearchContext = (modal) ->
+    $scope.setListSearchContext = () ->
+      $scope.$emit 'showList'
+    $scope.setMapSearchContext = () ->
+      $scope.$emit 'showMap'
+    $scope.setFloorSearchContext = () ->
+      $scope.$emit 'showFloor'

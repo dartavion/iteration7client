@@ -3,7 +3,7 @@
 @import "../bower_components/sass-bootstrap/lib/variables";
 @import "../bower_components/sass-bootstrap/lib/mixins";
 @import "../bower_components/sass-bootstrap/lib/scaffolding";
-@import "../bower_components/sass-bootstrap/lib/glyphicons";
+
 @import "../bower_components/sass-bootstrap/lib/component-animations";
 @import "../bower_components/sass-bootstrap/lib/modals";
 @import "../bower_components/sass-bootstrap/lib/buttons";
@@ -16,8 +16,11 @@
 // BASE
 @import "base/topcoat";
 @import "base/base";
-@import "base/fonts";
 @import "base/colors";
+
+@import "base/glyphicons-font";
+@import "base/amc-font";
+@import "base/font-overrides";
 
 // COMPONENTS
 @import "components/mobile_nav";

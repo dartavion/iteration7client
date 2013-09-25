@@ -19,17 +19,11 @@
     .search-bar__clear-search-button {
       position: absolute;
       background-color: white;
-      border: lightblue;
-      width: 25px;
-      height: 25px;
-      top: 4px;
-      right: 7px;
-      line-height: 1.313rem;
-      font-size: 12px;
-      background-image: url("/images/cancel.svg");
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: 12px;
+      top: 3px;
+      right:6px;
+      height: 16px;
+      color: $gray;
+      font-size: 1.7em;
     }
   }
 }
