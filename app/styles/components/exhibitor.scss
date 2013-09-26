@@ -1,3 +1,15 @@
+.amc-clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  }
+  &:after {
+    clear: both;
+  }
+}
+
 body.exhibitor {
 
 	background-color: white;
@@ -50,7 +62,6 @@ body.exhibitor {
 
 	div.logo-short-info {
 		padding: 10px;
-
 		img {
 			display: block;
 			margin: 0 auto;
@@ -67,7 +78,7 @@ body.exhibitor {
 	.action-menu-list {
 		padding: 0 10px;
 
-		ul {
+		> ul {
 			
 			li.heading {
 				position: relative;
@@ -82,7 +93,15 @@ body.exhibitor {
 
 			li {
 				background-color: #fafafa;
-				color: #999999;
+				color: #5a5a5a;
+
+				ul.product-lines-list, ul.categories-list {
+					list-style: square;
+
+					li {
+						color: #999999;
+					}
+				}
 
 				img.notes-icon, img.calendar-icon {
 					width: 20px;
@@ -102,12 +121,21 @@ body.exhibitor {
 					color: #919296;
 					display: inline-block;
 				}
+
+				span.li-icon {
+					position: absolute;
+					top: 10px;
+					right: 10px;
+				}
 			}
 
-			li:first-child {
+			> li:first-child {
 				background-color: white;
 			}
-
+			
+			span.more {
+				color: #00acee;
+			}
 
 		}
 	}
