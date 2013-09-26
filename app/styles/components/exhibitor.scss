@@ -91,7 +91,9 @@ body.exhibitor {
 				}
 			}
 
-			li {
+			li.list-group-item {
+
+
 				background-color: #fafafa;
 				color: #5a5a5a;
 
@@ -125,7 +127,7 @@ body.exhibitor {
 				span.li-icon {
 					position: absolute;
 					top: 10px;
-					right: 10px;
+					right: 15px;
 				}
 			}
 
