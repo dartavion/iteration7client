@@ -11,10 +11,12 @@ $dark-gray: #666666;
 $medium-gray-border: rgba(0, 0, 0, 0.2);
 $charcoal: #333333;
 $white: #ffffff;
+$white-opacity: rgba(255,255,255, .7);
 $black: #000000;
 $building-1: #005EC6;
 $building-2: #BE0101;
 $building-3: #107F50;
+$building-3-darken: darken($building-3, 4%);
 
 $card-border: 1px solid $gray;
 $card-border-radius: 4px;
