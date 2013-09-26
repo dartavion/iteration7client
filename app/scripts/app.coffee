@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module('AMCClientApp', ['ngRoute', 'ngAnimate', 'ngTouch', 'ngMobile', 'elasticjs.service', 'configuration'])
+angular.module('AMCClientApp', ['ngRoute', 'ui.bootstrap', 'ngAnimate', 'ngTouch', 'ngMobile', 'elasticjs.service', 'configuration'])
   .config ($routeProvider, $locationProvider) ->
     $routeProvider
       .when '/',

@@ -21,20 +21,21 @@ angular.module('AMCClientApp')
 
       $scope.$on 'showList', () ->
         console.log 'List'
-        isList = true
-        isMap = false
-        isFloor = false
+        $scope.isList = true
+        $scope.isMap = false
+        $scope.isFloor = false
+
 
       $scope.$on 'showMap', () ->
         console.log 'Map'
-        isList = false
-        isMap = true
-        isFloor = false
+        $scope.isList = false
+        $scope.isMap = true
+        $scope.isFloor = false
       $scope.$on 'showFloor', () ->
         console.log 'Floor'
-        isList = false
-        isMap = false
-        isFloor = true
+        $scope.isList = false
+        $scope.isMap = false
+        $scope.isFloor = true
       $scope.search = () ->
 
         if this.searchField.length >= 3

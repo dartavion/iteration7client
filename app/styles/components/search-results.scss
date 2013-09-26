@@ -55,6 +55,7 @@
       padding: 5px;
       min-height: 260px;
       max-height: 300px;
+
       ul {
         color: $amc-blue;
         list-style: square;
@@ -84,7 +85,28 @@
       }
     }
   }
+  .amc-search-results__result-detail--collapsed{
+    padding: 5px;
+    background-color: $light-gray;
+    position: relative;
+    overflow: hidden;
+    overflow-x: scroll;
+    .amc-search-results-container{
+      width: 700px;
+      > div {
+        float: left;
+        position: relative;
+        width: 260px;
+        margin: 5px;
+        background-color: $white;
+        padding: 5px;
+        min-height: auto;
+        max-height: auto;
+      }
+    }
+  }
 }
+
 
 .search-panel {
   display: block;
