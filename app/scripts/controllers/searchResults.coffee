@@ -19,6 +19,22 @@ angular.module('AMCClientApp')
       $scope.clearSearchField = () ->
         @searchField = ''
 
+      $scope.$on 'showList', () ->
+        console.log 'List'
+        isList = true
+        isMap = false
+        isFloor = false
+
+      $scope.$on 'showMap', () ->
+        console.log 'Map'
+        isList = false
+        isMap = true
+        isFloor = false
+      $scope.$on 'showFloor', () ->
+        console.log 'Floor'
+        isList = false
+        isMap = false
+        isFloor = true
       $scope.search = () ->
 
         if this.searchField.length >= 3
