@@ -16,6 +16,12 @@ angular.module('AMCClientApp')
           target.on "click", ->
             $(this).find("ul").toggle 500
       , 50)
+
+      # temporary hiding for testing other blocks with lower z-index
+      $('body').css({
+        'overflow' : 'visible'
+      });
+
     ), 0
 
 
