@@ -55,6 +55,7 @@
       padding: 5px;
       min-height: 260px;
       max-height: 300px;
+
       ul {
         color: $amc-blue;
         list-style: square;
@@ -81,10 +82,83 @@
         font-weight: normal;
         font-size: 1em;
         padding: 0;
+
+      }
+    }
+  }
+  .amc-search-results__result-detail--collapsed{
+    padding: 5px;
+    background-color: $light-gray;
+    position: relative;
+    overflow: hidden;
+    overflow-x: scroll;
+    .amc-search-results-container{
+      width: 700px;
+      > div {
+        float: left;
+        position: relative;
+        width: 260px;
+        margin: 5px;
+        background-color: $white;
+        padding: 5px;
+        min-height: auto;
+        max-height: auto;
+      }
+    }
+  }
+  .amc-search-results__result--floor{
+    h2 {
+      text-align:center;
+      font-size: 1.5em;
+      font-weight:normal;
+      margin: 5px 0 0 0;
+      color: $dark-gray;
+
+      i{
+        float:none;
+        font-size: 2.5em;
+        vertical-align: middle;
+      }
+    }
+    ul{
+      padding-right: 40px;
+      li{
+        color: $dark-gray;
+        background-color: $light-gray;
+        padding: 20px 10px 20px 10px;
+        border: 1px solid $white;
+        border-radius: $card-border-radius;
+
+        .floor{
+          padding: 3px;
+          background-color: $building-3-darken;
+        }
+
+      }
+    }
+    .result-count, i{
+      float: right;
+    }
+    .hasResults{
+      color: $white;
+      background-color: $building-3;
+      .result-count{
+        color:$white-opacity;
+        padding: 3px;
+        vertical-align: middle;
+      }
+      i{
+        color:$white-opacity;
+        vertical-align: middle;
+        padding-top: 3px;
+        margin-left: 7px;
       }
     }
   }
 }
+
+
+
 
 .search-panel {
   display: block;

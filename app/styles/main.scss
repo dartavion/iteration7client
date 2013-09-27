@@ -12,6 +12,8 @@
 @import "../bower_components/sass-bootstrap/lib/carousel";
 @import "../bower_components/sass-bootstrap/lib/badges";
 @import "../bower_components/sass-bootstrap/lib/tables";
+@import "../bower_components/sass-bootstrap/lib/button-groups";
+@import "../bower_components/sass-bootstrap/lib/navs";
 
 
 // BASE
@@ -29,6 +31,7 @@
 @import "components/exhibitor_detail";
 @import "components/exhibitors_list";
 @import "components/exhibitor";
+@import "components/tabs";
 
 @import "components/search-bar";
 @import "components/search-context-buttons";

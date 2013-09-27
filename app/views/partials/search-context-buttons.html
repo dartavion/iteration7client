@@ -1,15 +1,15 @@
 <div class="topcoat-button-bar full" >
   <div class="topcoat-button-bar__item">
-    <button class="topcoat-button-bar__button--large full"
-            ng-click="setListSearchContext()">LIST</button>
+    <button class="topcoat-button-bar__button--large full active"
+            ng-click="tabs[0].active = true">LIST</button>
   </div>
   <div class="topcoat-button-bar__item">
     <button class="topcoat-button-bar__button--large full"
-            ng-click="setMapSearchContext()">MAP</button>
+            ng-click="tabs[1].active = true">MAP</button>
   </div>
   <div class="topcoat-button-bar__item">
     <button class="topcoat-button-bar__button--large full"
-            ng-click="setFloorSearchContext()">FLOORS</button>
+            ng-click="tabs[2].active = true">FLOORS</button>
   </div>
 </div>
 

@@ -1,0 +1,37 @@
+<section ng-repeat="result in results.hits.hits">
+  <div class="amc-search-results__result">
+    <h2 style="width:100%">
+      <!--<a ng-click="toggleSearch();hideSearch()" href="#/exhibitor/{{result._id}}">-->
+        <!--{{result.fields.EXHIBNAME}}-->
+      <!--</a>-->
+      <a ng-click="setTab('map')">
+        {{result.fields.EXHIBNAME}}
+      </a>
+      <span style="font-weight: bold">B1</span>
+      <i class="icon-building2"></i>
+      <span>22</span>
+      <span>&dash;</span>
+      <span>8231</span>
+    </h2>
+
+    <span style="vertical-align: middle;padding-right:5px;" ng-click="addMeToFavorites()">
+      <i class="icon-plus"></i>
+    </span>
+  </div>
+  <div class="amc-search-results__result-detail">
+    <div class="amc-search-results-container">
+      <div class="amc-search-results__image">
+        <img src="images/exhibitor/gallery-1.png"/>
+      </div>
+      <div class="amc-search-results__result-detail--data">
+        <h2>Lorem ipsum moo doo dee doo dah la-de-da-dee-dooo!</h2>
+        <ul>
+          <li><span>Item One</span></li>
+          <li><span>Item Two</span></li>
+          <li><span>Item Three</span></li>
+          <li><span>Item Four</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

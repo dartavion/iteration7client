@@ -21,9 +21,6 @@
 
   </div>
 
-  <div class="amc-search-context-buttons"
-       ng-controller="SearchbuttonbarCtrl"
-       ng-include="'views/partials/search-context-buttons.html'"></div>
 
   <div class="topcoat-list__container side-nav__list__container">
 
@@ -61,50 +58,26 @@
   </div>
 </div>
 
+
+
+
 <div class="amc-search-results"
+     ng-controller="SearchbuttonbarCtrl"
      ng-class="{'show-search-results' : isSearchResultsOpen}"
      display-search-results="isSearchResultsOpen">
 
-  <section ng-class="{active: isList}" ng-repeat="result in results.hits.hits">
-    <div class="amc-search-results__result" >
-      <h2 style="width:100%">
-        <a ng-click="toggleSearch();hideSearch()" href="#/exhibitor/{{result._id}}">
-          {{result.fields.EXHIBNAME}}
-        </a>
-        <span style="font-weight: bold">B1</span>
-        <i class="icon-building2"></i>
-        <span>22</span>
-        <span>&dash;</span>
-        <span>8231</span>
-      </h2>
+  <tabset class="full-width-tabs">
+    <tab heading="List" active="active.list">
+      <div ng-include="'views/partials/search-list-view.html'"></div>
+    </tab>
 
-      <span style="vertical-align: middle;padding-right:5px;" ng-click="addMeToFavorites()">
-        <i class="icon-plus"></i>
-      </span>
-    </div>
-    <div class="amc-search-results__result-detail">
-      <div class="amc-search-results-container">
-        <div class="amc-search-results__image">
-          <img src="images/exhibitor/gallery-1.png"/>
-        </div>
-        <div class="amc-search-results__result-detail--data">
-          <h2>Lorem ipsum moo doo dee doo dah la-de-da-dee-dooo!</h2>
-          <ul>
-            <li><span>Item One</span></li>
-            <li><span>Item Two</span></li>
-            <li><span>Item Three</span></li>
-            <li><span>Item Four</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+    <tab heading="Map" active="active.map">
+      <div ng-include="'views/partials/search-map-view.html'"></div>
+    </tab>
 
-  <section ng-class="{active: isMap}">
-    Map Section
-  </section>
-  <section ng-class="{active: isFloor}">
-    Map Section
-  </section>
+    <tab heading="Floors" active="active.floors">
+      <div ng-include="'views/partials/search-floor-view.html'"></div>
+    </tab>
+  </tabset>
 
 </div>
