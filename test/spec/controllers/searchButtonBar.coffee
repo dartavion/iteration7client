@@ -1,6 +1,6 @@
 'use strict'
 
-describe 'Controller: SearchbuttonbarCtrl', () ->
+describe 'Controller: SearchContextButtonsCtrl', () ->
 
   # load the controller's module
   beforeEach module 'AMCClientApp'
@@ -11,7 +11,7 @@ describe 'Controller: SearchbuttonbarCtrl', () ->
   # Initialize the controller and a mock scope
   beforeEach inject ($controller, $rootScope) ->
     scope = $rootScope.$new()
-    SearchbuttonbarCtrl = $controller 'SearchbuttonbarCtrl', {
+    SearchbuttonbarCtrl = $controller 'SearchContextButtonsCtrl', {
       $scope: scope
     }
 

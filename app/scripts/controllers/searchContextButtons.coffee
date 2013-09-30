@@ -1,7 +1,7 @@
 'use strict'
 
 angular.module('AMCClientApp')
-  .controller 'SearchbuttonbarCtrl', ($scope) ->
+  .controller 'SearchContextButtonsCtrl', ($scope) ->
 
     $scope.setTab = (tab) ->
       $scope.active[tab] = true

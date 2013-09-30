@@ -58,25 +58,26 @@
   </div>
 </div>
 
-
-
-
 <div class="amc-search-results"
-     ng-controller="SearchbuttonbarCtrl"
+     ng-controller="SearchContextButtonsCtrl"
      ng-class="{'show-search-results' : isSearchResultsOpen}"
      display-search-results="isSearchResultsOpen">
 
   <tabset class="full-width-tabs">
     <tab heading="List" active="active.list">
-      <div ng-include="'views/partials/search-list-view.html'"></div>
+      <section class="amc-search-list"
+               ng-repeat="result in results.hits.hits"
+               ng-include="'views/partials/search-list-view.html'"></section>
     </tab>
 
     <tab heading="Map" active="active.map">
-      <div ng-include="'views/partials/search-map-view.html'"></div>
+      <section class="amc-search-maps"
+               ng-include="'views/partials/search-map-view.html'"></section>
     </tab>
 
     <tab heading="Floors" active="active.floors">
-      <div ng-include="'views/partials/search-floor-view.html'"></div>
+      <section class="amc-search-floors"
+               ng-include="'views/partials/search-floor-view.html'"></section>
     </tab>
   </tabset>
 
