@@ -1,32 +1,48 @@
 @import '../base/colors';
 
 .amc-search-list {
-  .amc-search-list__item {
-    display: inline-table;
+  .amc-search-list__wrapper{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: fixed;
+    padding-top: 100px;
+    bottom:0;
     width: 100%;
-    overflow-x: auto;
-    height: 100%;
-    background-color: $white;
-    h2, > span {
-      display: table-cell;
-      a {
-        display: block;
-        color: $dark-gray;
-        font-weight: normal;
-        &:link, &:hover, &:active, &:visited {
+    height:100%;
+    -webkit-overflow-scrolling: touch;
+  }
+  .amc-search-list__scroll-area{
+    width:100%;
+  }
+
+  .amc-search-list__item {
+
+    .item-bar{
+      width: 100%;
+      overflow-x: auto;
+      height: 100%;
+      background-color: $white;
+      h2, > span {
+        display: table-cell;
+        a {
+          display: block;
           color: $dark-gray;
-          text-decoration: none;
+          font-weight: normal;
+          &:link, &:hover, &:active, &:visited {
+            color: $dark-gray;
+            text-decoration: none;
+          }
+        }
+        span {
+          font-weight: normal;
+          font-size: .8em;
+          color: $dark-gray;
         }
       }
-      span {
-        font-weight: normal;
-        font-size: .8em;
-        color: $dark-gray;
+      h2 {
+        font-size: 1.2em;
+        padding: 10px;
       }
-    }
-    h2 {
-      font-size: 1.2em;
-      padding: 10px;
     }
   }
   .amc-search-list__item-detail {
@@ -267,6 +283,9 @@
   .nav-tabs{
     position:absolute;
     z-index: 2;
+  }
+  .tab-pane{
+    padding-top: 60px;
   }
 }
 
