@@ -29,7 +29,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="your-class-prefix"] {
 */
-.icon-building1, .icon-building2, .icon-building3, .icon-arrow-down, .icon-notes, .icon-menu, .icon-list, .icon-camera, .icon-calendar, .icon-search, .icon-todo, .icon-x, .icon-plus {
+.icon-building1, .icon-building2, .icon-building3, .icon-arrow-down, .icon-notes, .icon-menu, .icon-list, .icon-camera, .icon-calendar, .icon-search, .icon-todo, .icon-x, .icon-plus, .icon-building3-triangle, .icon-building2-circle, .icon-building1-square, .icon-map-restrooms, .icon-map-escalator, .icon-map-elevator, .icon-map-bridgeway {
   font-family: 'AMC';
   speak: none;
   font-style: normal;
@@ -78,5 +78,24 @@ you can use the generic selector below, but it's slower:
 .icon-plus:before {
   content: "\e00c";
 }
-
-
+.icon-building3-triangle:before {
+  content: "\e00b";
+}
+.icon-building2-circle:before {
+  content: "\e00d";
+}
+.icon-building1-square:before {
+  content: "\e00e";
+}
+.icon-map-restrooms:before {
+  content: "\e000";
+}
+.icon-map-escalator:before {
+  content: "\e001";
+}
+.icon-map-elevator:before {
+  content: "\e002";
+}
+.icon-map-bridgeway:before {
+  content: "\e009";
+}

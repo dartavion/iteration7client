@@ -65,6 +65,10 @@ angular.module('AMCClientApp')
       ]}
     ]
 
+    building_map = [
+      {}
+    ]
+
 
     {
 
