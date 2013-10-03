@@ -1,23 +1,24 @@
 @import '../base/colors';
 
 .amc-search-list {
-  .amc-search-list__wrapper{
+  .amc-search-list__wrapper {
     overflow-y: scroll;
     overflow-x: hidden;
     position: fixed;
     padding-top: 100px;
-    bottom:0;
+    bottom: 0;
     width: 100%;
-    height:100%;
+    height: 100%;
     -webkit-overflow-scrolling: touch;
   }
-  .amc-search-list__scroll-area{
-    width:100%;
+
+  .amc-search-list__scroll-area {
+    width: 100%;
   }
 
   .amc-search-list__item {
 
-    .item-bar{
+    .item-bar {
       width: 100%;
       overflow-x: auto;
       height: 100%;
@@ -152,30 +153,35 @@
 }
 
 .amc-search-floors {
-  .amc-search-floors__wrapper{
+  .amc-search-floors__wrapper {
     overflow: scroll;
     position: fixed;
     padding-top: 100px;
-    bottom:0;
+    bottom: 0;
     width: 100%;
-    height:100%;
+    height: 100%;
     -webkit-overflow-scrolling: touch;
   }
-  .amc-search-floors__scroll-area{
-    width: 900px;
+  .amc-search-floors__scroll-area {
+    width: 1000px;
+
   }
-  .amc-search-floors__item{
-    float: left;
-    width: 270px;
+  .amc-search-floors__item {
+    display: inline-block;
+    width:270px;
     position: relative;
+    margin-right:38px;
   }
 
+  i.icon-arrow-down{
+    color: $light-gray;
+  }
   h2 {
     text-align: center;
     font-weight: normal;
     margin: 5px 0 0 0;
     color: $dark-gray;
-    span{
+    span {
       font-size: 1.2em;
     }
     i {
@@ -184,7 +190,7 @@
     }
   }
   ul {
-    margin-left: -50px;
+    margin-left: -38px;
     li {
       color: $dark-gray;
       background-color: $light-gray;
@@ -192,22 +198,26 @@
       border-radius: $card-border-radius;
       display: inline-table;
       width: 100%;
-      padding-right: 10px;
+      margin-left:20px;
+      position:relative;
       span:first-child {
         text-align: center;
         width: 45px;
       }
       &:before {
+        border: 1px solid $white;
+        padding: 5px;
+        border-radius: $card-border-radius;
         font-family: 'AMC';
         display: table-cell;
         vertical-align: middle;
         color: $white;
         content: "\e009";
-        font-size: 2.7em;
+        font-size: 2.0em;
         position: relative;
         background-color: #edd69b;
         width: 40px;
-        border-right: 1px solid $white;
+        left:-45px;
       }
       .floor {
         padding: 3px;
@@ -226,7 +236,7 @@
       &.no-bridge:before {
         background-color: $white;
       }
-      &.no-bridge--white, &.no-bridge--white:before{
+      &.no-bridge--white, &.no-bridge--white:before {
         background-color: $white;
       }
     }
@@ -234,57 +244,105 @@
 }
 
 .amc-search-results {
-  .hasResults-building1{
-    color: $white;
-    background-color: $building-1;
-    .floor {
-      border-top: 15px solid $building-1;
-      border-right: 10px solid $building-1;
-      border-bottom: 15px solid $building-1;
-      border-left: 10px solid $building-1;
-    }
+  .result-count {
+    color: $white-opacity;
+    padding: 3px;
+    vertical-align: middle;
+    text-align: right;
   }
-  .hasResults-building2{
-    color: $white;
-    background-color: $building-2;
-    .floor-building2 {
-      border-top: 15px solid $building-2;
-      border-right: 10px solid $building-2;
-      border-bottom: 15px solid $building-2;
-      border-left: 10px solid $building-2;
-    }
-  }
-  .hasResults-building3{
-    color: $white;
-    background-color: $building-3;
-    .floor-building3 {
-      border-top: 15px solid $building-3;
-      border-right: 10px solid $building-3;
-      border-bottom: 15px solid $building-3;
-      border-left: 10px solid $building-3;
-    }
-  }
-  .hasResults {
 
-    .result-count {
-      color: $white-opacity;
-      padding: 3px;
-      vertical-align: middle;
-      text-align: right;
+  .hasResults-building1,
+  .hasResults-building2,
+  .hasResults-building3 {
+    span, i{
+      padding:0;
+      vertical-align:middle;
     }
-    i {
+    i{
       color: $white-opacity;
       vertical-align: middle;
       padding-top: 3px;
       margin-left: 7px;
     }
+    .amc-toolbar-buttons{
+      display:inline-block;
+      white-space: nowrap;
+      overflow-x: auto;
+      overflow-y: hidden;
+      width: 100%;
+      padding: 10px 0 10px 0;
+    }
+    .amc-toolbar-button{
+      border-radius: 5px;
+      background-color: $black-opacity;
+      padding: 5px;
+      color: $white;
+      font-size: 2.5em;
+    }
+    &.fixed-top{
+      position:fixed;
+      left:0;
+      margin:0;
+      width: 100%;
+      padding: 10px;
+    }
+    &.header{
+      top: 94px;
+    }
+    &.toolbar{
+      top: 134px;
+    }
+    .divider{
+      border:none;
+      border-bottom:1px solid $white-opacity;
+      margin:0 0 10px 0;
+    }
   }
+
+  .floor-result-container{
+    height: 100%;
+    position: absolute;
+    top:2px;
+    left: 0px;
+    vertical-align: middle;
+    width: 100%;
+    display:inline-table;
+    &:first-child{
+      height:44px;
+    }
+    .floor-subject{
+      padding-left:10px;
+    }
+  }
+  .hasResults-building1 {
+    color: $white;
+    background-color: $building-1;
+    .floor-building1 {
+      background-color: $black-opacity;
+
+    }
+  }
+  .hasResults-building2 {
+    color: $white;
+    background-color: $building-2;
+    .floor-building2 {
+      background-color: $black-opacity;
+    }
+  }
+  .hasResults-building3 {
+    color: $white;
+    background-color: $building-3;
+    .floor-building3 {
+      background-color: $black-opacity;
+    }
+  }
+
   // bootstrap overwrite
-  .nav-tabs{
-    position:absolute;
+  .nav-tabs {
+    position: absolute;
     z-index: 2;
   }
-  .tab-pane{
+  .tab-pane {
     padding-top: 60px;
   }
 }
@@ -311,4 +369,6 @@
   min-height: 100%;
   height: 100%;
 }
+
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3){}
 

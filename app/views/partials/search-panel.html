@@ -63,21 +63,30 @@
      ng-class="{'show-search-results' : isSearchResultsOpen}"
      display-search-results="isSearchResultsOpen">
 
-  <tabset class="full-width-tabs">
-    <tab heading="List" active="active.list">
-      <section class="amc-search-list"
-               ng-include="'views/partials/search-list-view.html'"></section>
-    </tab>
+  <div class="amc-search-context-buttons"
+       ng-include="'views/partials/search-context-buttons.html'"></div>
 
-    <tab heading="Map" active="active.map">
-      <section class="amc-search-maps"
-               ng-include="'views/partials/search-map-view.html'"></section>
-    </tab>
+  <div ui-view="search-views"></div>
 
-    <tab heading="Floors" active="active.floors">
-      <section class="amc-search-floors"
-               ng-include="'views/partials/search-floor-view.html'"></section>
-    </tab>
-  </tabset>
+  <!--<tabset class="full-width-tabs">-->
+    <!--<tab heading="List" active="active.list">-->
+      <!--<section class="amc-search-list"-->
+               <!--ng-include="'views/partials/search-list-view.html'"></section>-->
+    <!--</tab>-->
+
+    <!--<tab heading="Map" active="active.map">-->
+      <!--<section class="amc-search-maps"-->
+               <!--ng-include="'views/partials/search-map-view.html'"></section>-->
+    <!--</tab>-->
+
+    <!--<tab heading="Floors" active="active.floors">-->
+      <!--<section class="amc-search-floors"-->
+               <!--ng-include="'views/partials/search-floor-view.html'"></section>-->
+    <!--</tab>-->
+    <!--<tab heading="x">-->
+      <!--<section class="amc-search-floors-x"-->
+              <!--ng-include="'views/partials/search-floor-expand-view.html'"></section>-->
+    <!--</tab>-->
+  <!--</tabset>-->
 
 </div>

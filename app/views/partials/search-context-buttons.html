@@ -1,15 +1,18 @@
 <div class="topcoat-button-bar full" >
   <div class="topcoat-button-bar__item">
-    <button class="topcoat-button-bar__button--large full active"
-            ng-click="tabs[0].active = true">LIST</button>
+    <a class="topcoat-button-bar__button--large full "
+       ng-class="{ active: $state.includes('list') }"
+       ui-sref="search-list">LIST</a>
   </div>
   <div class="topcoat-button-bar__item">
-    <button class="topcoat-button-bar__button--large full"
-            ng-click="tabs[1].active = true">MAP</button>
+    <a class="topcoat-button-bar__button--large full"
+       ng-class="{ active: $state.includes('map') }"
+       ui-sref="search-map">MAP</a>
   </div>
   <div class="topcoat-button-bar__item">
-    <button class="topcoat-button-bar__button--large full"
-            ng-click="tabs[2].active = true">FLOORS</button>
+    <a class="topcoat-button-bar__button--large full"
+       ng-class="{ active: $state.includes('floor') }"
+       ui-sref="search-floor">FLOORS</a>
   </div>
 </div>
 
