@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module('AMCClientApp', ['ui.router', 'ui.bootstrap', 'ngAnimate', 'ngTouch', 'ngMobile', 'elasticjs.service', 'configuration'])
+angular.module('AMCClientApp', ['ui.router','ngAnimate', 'ngTouch', 'ngMobile', 'elasticjs.service', 'configuration'])
 .config ($stateProvider, $urlRouterProvider) ->
     $urlRouterProvider.otherwise('/home')
     $stateProvider
@@ -25,32 +25,25 @@ angular.module('AMCClientApp', ['ui.router', 'ui.bootstrap', 'ngAnimate', 'ngTou
           controller: 'ExhibitorCtrl'
       .state 'login',
           url: '/login'
-          templateUrl: 'views/login.html',
-          controller: 'LoginCtrl'
+          templateUrl: 'views/login.html'
       .state 'markets',
           url: '/markets'
-          templateUrl: 'views/markets.html',
-          controller: 'MarketsCtrl'
+          templateUrl: 'views/markets.html'
       .state 'campusmap',
           url: '/campusmap',
-          templateUrl: 'views/campusmap.html',
-          controller: 'CampusmapCtrl'
+          templateUrl: 'views/campusmap.html'
       .state 'services',
           url: '/services',
-          templateUrl: 'views/services.html',
-          controller: 'ServicesCtrl'
+          templateUrl: 'views/services.html'
       .state 'collections',
           url: '/collections',
-          templateUrl: 'views/collections.html',
-          controller: 'CollectionsCtrl'
+          templateUrl: 'views/collections.html'
       .state 'travel',
           url: '/travel',
-          templateUrl: 'views/travel.html',
-          controller: 'TravelCtrl'
+          templateUrl: 'views/travel.html'
       .state 'contact',
           url: '/contact',
-          templateUrl: 'views/contact.html',
-          controller: 'ContactCtrl'
+          templateUrl: 'views/contact.html'
 
       .state
         name: 'search-list',
