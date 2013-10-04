@@ -28,7 +28,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="your-class-prefix"] {
 */
-.icon-building1, .icon-building2, .icon-building3, .icon-arrow-down, .icon-notes, .icon-menu, .icon-list, .icon-camera, .icon-calendar, .icon-search, .icon-todo, .icon-x, .icon-plus {
+.icon-map-wifi, .icon-map-taxi, .icon-map-registration, .icon-map-rail, .icon-map-parking, .icon-map-marta, .icon-map-info, .icon-map-food, .icon-map-firstaid, .icon-map-coffee, .icon-map-coatcheck, .icon-map-businesscenter, .icon-map-atm, .icon-map-accessible, .icon-map-restrooms, .icon-map-escalator, .icon-map-elevator, .icon-map-bridgeway, .icon-x, .icon-todo, .icon-search, .icon-plus, .icon-notes, .icon-menu, .icon-list, .icon-camera, .icon-calendar, .icon-arrow-down, .icon-building3, .icon-building3-triangle, .icon-building2, .icon-building2-circle, .icon-building1, .icon-building1-square, .icon-map, .icon-map-pin, .icon-flag {
 	font-family: 'AMC';
 	speak: none;
 	font-style: normal;
@@ -38,42 +38,114 @@ you can use the generic selector below, but it's slower:
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
 }
-.icon-building1:before {
-	content: "\31";
+.icon-map-wifi:before {
+	content: "\e00f";
 }
-.icon-building2:before {
-	content: "\32";
+.icon-map-taxi:before {
+	content: "\e010";
 }
-.icon-building3:before {
-	content: "\33";
+.icon-map-registration:before {
+	content: "\e011";
 }
-.icon-arrow-down:before {
-	content: "\e003";
+.icon-map-rail:before {
+	content: "\e012";
 }
-.icon-notes:before {
-	content: "\e004";
+.icon-map-parking:before {
+	content: "\e013";
 }
-.icon-menu:before {
-	content: "\e005";
+.icon-map-marta:before {
+	content: "\e014";
 }
-.icon-list:before {
+.icon-map-info:before {
+	content: "\e015";
+}
+.icon-map-food:before {
+	content: "\e016";
+}
+.icon-map-firstaid:before {
+	content: "\e017";
+}
+.icon-map-coffee:before {
+	content: "\e018";
+}
+.icon-map-coatcheck:before {
+	content: "\e019";
+}
+.icon-map-businesscenter:before {
+	content: "\e01a";
+}
+.icon-map-atm:before {
+	content: "\e01b";
+}
+.icon-map-accessible:before {
+	content: "\e01c";
+}
+.icon-map-restrooms:before {
 	content: "\e006";
 }
-.icon-camera:before {
+.icon-map-escalator:before {
 	content: "\e007";
 }
-.icon-calendar:before {
+.icon-map-elevator:before {
 	content: "\e008";
 }
-.icon-search:before {
-	content: "\3f";
-}
-.icon-todo:before {
-	content: "\e00a";
+.icon-map-bridgeway:before {
+	content: "\e009";
 }
 .icon-x:before {
 	content: "\78";
 }
+.icon-todo:before {
+	content: "\e00a";
+}
+.icon-search:before {
+	content: "\3f";
+}
 .icon-plus:before {
 	content: "\e00c";
+}
+.icon-notes:before {
+	content: "\e00b";
+}
+.icon-menu:before {
+	content: "\e00d";
+}
+.icon-list:before {
+	content: "\e00e";
+}
+.icon-camera:before {
+	content: "\e01d";
+}
+.icon-calendar:before {
+	content: "\e01e";
+}
+.icon-arrow-down:before {
+	content: "\e01f";
+}
+.icon-building3:before {
+	content: "\33";
+}
+.icon-building3-triangle:before {
+	content: "\e001";
+}
+.icon-building2:before {
+	content: "\32";
+}
+.icon-building2-circle:before {
+	content: "\e003";
+}
+.icon-building1:before {
+	content: "\31";
+}
+.icon-building1-square:before {
+	content: "\e005";
+}
+.icon-map:before {
+	content: "\e000";
+}
+.icon-map-pin:before {
+	content: "\e002";
+}
+.icon-flag:before {
+	content: "\e004";
 }
