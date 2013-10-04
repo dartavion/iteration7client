@@ -5,6 +5,8 @@ angular.module('AMCClientApp')
     '$scope', 'ejsResource', 'ES_HOST', 'AT_HOST', '$http'
     ( $scope, ejsResource, ES_HOST, AT_HOST, $http, localStorageService) ->
 
+      ejs = ejsResource(ES_HOST)
+
       $scope.isSearchResultsOpen = false
 
       $scope.displaySearch = () ->
@@ -36,10 +38,10 @@ angular.module('AMCClientApp')
         $scope.isList = false
         $scope.isMap = false
         $scope.isFloor = true
+
       $scope.search = () ->
 
         if this.searchField.length >= 3
-          ejs = ejsResource(ES_HOST)
 
           $scope.results = ejs.Request()
             .indices("amc")
@@ -59,6 +61,38 @@ angular.module('AMCClientApp')
               act_type: 'search'
               'params[search_term]': this.searchField
               'params[user_id]': 1
+
+      $scope.facets = () ->
+
+        categoryFacet = ejs.TermsFacet('categories')
+           .field('EXHIBCATNAME')
+           .size(100000)
+
+        lineFacet = ejs.TermsFacet('lines')
+           .field('EXHIBLINENAME')
+           .size(100000)
+
+        salesRepFacet = ejs.TermsFacet('salesRep')
+          .scriptField("(FIRSTNAME + ' ' + LASTNAME in _source.STAFF) + ' ' + _source.EXHIBITORID")
+          .size(2000)
+
+        $scope.exhibitorFacets = ejs.Request()
+          .indices("amc")
+          .types("exhibitor")
+          .fields(['EXHIBNAME'])
+          .facet(categoryFacet)
+          .facet(lineFacet)
+          .facet(salesRepFacet)
+          .doSearch()
+
+        $scope.markets = ejs.Request()
+          .indices("amc")
+          .types("market")
+          .fields(['NAME','TEMPORARIESDATES','VISIBLEDATES'])
+          .size(20)
+          .doSearch()
+
+      $scope.facets()
   ]
 
 
