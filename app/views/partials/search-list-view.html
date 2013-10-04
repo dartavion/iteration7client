@@ -26,11 +26,8 @@
             <div class="amc-search-list__item-detail-image" style="background: url('images/exhibitor/gallery-1.png') no-repeat;"></div>
             <div class="amc-search-list__item-detail-data">
               <h2>Lorem ipsum moo doo dee doo dah la-de-da-dee-dooo!</h2>
-              <ul>
-                <li><span>Item One</span></li>
-                <li><span>Item Two</span></li>
-                <li><span>Item Three</span></li>
-                <li><span>Item Four</span></li>
+              <ul ng-repeat="productline in result.fields['BOOTHREQUESTS.PRODUCTLINES'][0]">
+                <li><span>{{productline.EXHIBLINENAME}}</span></li>
               </ul>
             </div>
           </div>

@@ -48,8 +48,8 @@ angular.module('AMCClientApp')
             .types("exhibitor")
             .fields([
               'EXHIBNAME',
-              'CATEGORIES.EXHIBCATNAME',
-              'BOOTHREQUESTS.BOOTHS.SHOW.SHOWDESC'
+              'BOOTHREQUESTS.BOOTHS',
+              'BOOTHREQUESTS.PRODUCTLINES'
             ])
             .query(
               ejs.QueryStringQuery().defaultField('_all').query(this.searchField)
