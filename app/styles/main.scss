@@ -37,3 +37,72 @@
 @import "components/search-bar";
 @import "components/search-context-buttons";
 @import "components/search-results";
+
+
+@media (min-device-width: 320px) and (min-device-height: 568px) {
+
+  .amc-search-list .amc-search-list__item-detail .amc-search-list__item-detail-image,
+  .amc-search-list .amc-search-list__item-detail .amc-search-list__item-detail-data{
+    width: 270px;
+    height: 270px;
+  }
+
+  .amc-search-list .amc-search-list__wrapper{
+    width: 715px;
+  }
+
+  .amc-search-floors .amc-search-floors__wrapper .amc-search-floors__scroll-area {
+    width: 950px;
+  }
+
+  .amc-search-floors .amc-search-floors__item{
+    width: 270px;
+  }
+
+  .amc-search-maps .amc-search-maps__wrapper .amc-search-maps__item{
+    width: 290px;
+  }
+
+
+
+
+}
+
+@media (min-device-width: 360px) and (min-device-height: 640px) {
+  .amc-search-floors .amc-search-floors__item{
+    width: 300px;
+  }
+
+  .amc-search-maps .amc-search-maps__wrapper .amc-search-maps__item{
+    width: 324px;
+  }
+}
+
+@media (min-device-width: 384px) and (min-device-height: 592px) {
+
+  .amc-search-list .amc-search-list__item-detail .amc-search-list__item-detail-image,
+  .amc-search-list .amc-search-list__item-detail .amc-search-list__item-detail-data{
+    width: 350px;
+    height: 350px;
+  }
+
+  .amc-search-list .amc-search-list__wrapper{
+      width: 715px;
+  }
+
+  .amc-search-floors .amc-search-floors__wrapper .amc-search-floors__scroll-area {
+    width: 1150px;
+  }
+
+  .amc-search-floors .amc-search-floors__item{
+    width: 340px;
+  }
+
+  .amc-search-maps .amc-search-maps__wrapper .amc-search-maps__item{
+    width: 348px;
+  }
+}
+
+
+
+

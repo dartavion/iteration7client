@@ -60,9 +60,6 @@
     div {
       background-color: $white;
       padding: 5px;
-      min-height: 260px;
-      max-height: 300px;
-
       ul {
         color: $amc-blue;
         list-style: square;
@@ -77,18 +74,24 @@
       }
     }
     .amc-search-list__item-detail-wrapper {
-      width: 700px;
+      width: 715px;
       background-color: $light-gray;
-      > div {
-        float: left;
-        width: 260px;
-        position: relative;
-        margin: 5px;
-      }
+    }
+    .amc-search-list__item-detail-data, .amc-search-list__item-detail-image{
+      display: inline-block;
+      vertical-align:top;
+      height: 260px;
+      width: 260px;
     }
     .amc-search-list__item-detail-image {
       border: $card-border;
       border-radius: $card-border-radius;
+      background-color: $white;
+      background-size: cover !important;
+
+      img{
+        width: 100%;
+      }
     }
     .amc-search-list__item-detail-data {
       padding-left: 20px;
@@ -106,14 +109,18 @@
 }
 
 .amc-search-maps {
+  position:relative;
+  height:100%;
   .amc-search-maps__wrapper {
+    position: absolute;
+    width: 100%;
+    bottom:70px;
     overflow-x: scroll;
     padding: 5px;
     background-color: $light-gray;
-    position: relative;
     -webkit-overflow-scrolling: touch;
     .amc-search-maps__scroll-area {
-      width: 700px;
+      width: 720px;
     }
     .amc-search-maps__item {
       display: inline-table;
@@ -163,7 +170,7 @@
     -webkit-overflow-scrolling: touch;
   }
   .amc-search-floors__scroll-area {
-    width: 1000px;
+    width: 1400px;
 
   }
   .amc-search-floors__item {
@@ -176,21 +183,7 @@
   i.icon-arrow-down{
     color: $light-gray;
   }
-  .alt-bridge:before{
-    border-radius:0;
-    border: 0;
-    background-color: transparent;
 
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-
-    border-bottom: 20px solid #edd69b;
-
-    content:'\e072';
-    color: $white;
-    font-size: 2.0em;
-    position: relative;
-  }
   h2 {
     text-align: center;
     font-weight: normal;
@@ -256,24 +249,15 @@
       }
     }
   }
-  //.basement{
-  //  background-color: $lightest-gray;
-  //  i{
-  //    color: $lightest-gray;
-  //  }
-  //  &:before{
-  //    font-size: 1em;
-  //  }
-  //  .floor-result-container{
-  //    top:0;
-  //  }
-  //  .floor-result-container:first-child{
-  //    height: 20px;
-  //  }
-  //}
 }
 
 .amc-search-results {
+  .amc-search-panel{
+    height: 100%;
+    position: fixed;
+    top: 70px;
+    bottom: 0;
+  }
   .result-count {
     color: $white-opacity;
     padding: 3px;
@@ -400,5 +384,5 @@
   height: 100%;
 }
 
-@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3){}
+
 
